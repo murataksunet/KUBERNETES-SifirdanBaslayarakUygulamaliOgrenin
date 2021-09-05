@@ -4,7 +4,7 @@
 <body>
 
 <p>
-<a href="https://youtu.be/JrSU2-4Vl1U" /><img src="https://kubernetes.io/images/kubernetes-horizontal-color.png" />
+<img src="https://kubernetes.io/images/kubernetes-horizontal-color.png">
 </a>
 </p>
 
