@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-imageerror
+  name: podimageerror
 spec:
   containers:
-  - name: c1-imageerror
+  - name: containerimageerror
     image: xnignx
