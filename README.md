@@ -10,6 +10,6 @@
 
 </body>
 </html>
-Çok Değerli, Pek Kıymetli Arkadaşlarım Sıfırdan Tüm Yönleriyle Docker Eğitimime Hepiniz Hoşgeldiniz 
+Çok Değerli, Pek Kıymetli Arkadaşlarım Kubernetes:Sıfırdan Başlarak Öğrenin Eğitimime Hepiniz Hoşgeldiniz 
 
-Son beş yıl içerisinde BT endüstrisinin bir yerindeyseniz , büyük olasılıkla konteyner ve bu platformda lider olan Docker’ı duydunuz yada yakın bir zamanda duyacaksınız. Peki Docker'ı bu kadar populer hale getiren nedir ?
+Eğitim hazırlıkları tüm hızıyla devam etmektedir. Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
