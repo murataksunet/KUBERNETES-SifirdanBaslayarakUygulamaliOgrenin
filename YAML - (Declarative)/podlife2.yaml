@@ -5,6 +5,6 @@ metadata:
 spec:
   restartPolicy: Never
   containers:
-  - name: c1-succeed
+  - name: c1
     image: ubuntu:latest
-    command: ['sh', '-c', 'echo "Hello, Kubernetes!" && sleep 20']
+    command: ['sh', '-c', 'echo "!!!!--Hello, Kubernetes--!!!!" && sleep 10']
