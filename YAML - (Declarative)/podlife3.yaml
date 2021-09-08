@@ -5,6 +5,6 @@ metadata:
 spec:
   restartPolicy: Never
   containers:
-  - name: containerfail
+  - name: c1
     image: ubuntu:latest
     command: ['sh', '-c', 'xyz']
