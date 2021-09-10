@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: project
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-namespace
+  namespace: project
+spec:
+  containers:
+  - name: web-c1
+    image: docker.io/murataksunet/k8s-web-helloo
+    ports:
+      - containerPort: 80
