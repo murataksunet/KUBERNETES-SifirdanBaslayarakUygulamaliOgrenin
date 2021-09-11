@@ -5,6 +5,7 @@ metadata:
   labels:
     app: phpmyadmin
     env: prodoction
+  namespace: myproject
 spec:
   containers:
         - name: phpmyadmin
