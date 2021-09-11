@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mysql-db
+  labels:
+    app: mysqldb
+    env: prodoction
+spec:
+  containers:
+  - name: mysqldb
+    image: mysql:5.6
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: birikiuc123!
+    ports:
+      - containerPort: 3306
