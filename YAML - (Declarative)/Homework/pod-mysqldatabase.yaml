@@ -5,6 +5,9 @@ metadata:
   labels:
     app: mysqldb
     env: prodoction
+  annotations:
+    owner: "Murat AKSU"
+     mail: "admin@murataksu.net"
 spec:
   containers:
   - name: mysqldb
