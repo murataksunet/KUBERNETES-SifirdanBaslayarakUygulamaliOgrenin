@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: pod-phpmyadmn
+  namespace: myproject
   labels:
     app: phpmyadmin
     env: prodoction
-  namespace: myproject
 spec:
   containers:
         - name: phpmyadmin
