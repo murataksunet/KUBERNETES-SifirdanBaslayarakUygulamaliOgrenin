@@ -1,0 +1,116 @@
+# label-selector.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod1
+  labels:
+    env: production
+    tier: frontend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod2
+  labels:
+    env: production
+    tier: frontend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod3
+  labels:
+    env: production
+    tier: frontend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod4
+  labels:
+    env: production
+    tier: backend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod5
+  labels:
+    env: production
+    tier: backend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod6
+  labels:
+    app: firstapp
+    tier: frontend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod7
+  labels:
+    app: firstapp
+    tier: frontend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod8
+  labels:
+    app: secondapp
+    tier: backend
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod9
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod10
+spec:
+  containers:
+  - name: app-container
+    image: nginx
+  nodeSelector:
+    hddtype: ssd
