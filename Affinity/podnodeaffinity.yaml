@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeaffinitypod1
+spec:
+  containers:
+  - name: nodeaffinity1
+    image: nginx:1.16-alpine
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+            # City == A or B
+          - key: City
+            operator: In #In, NotIn, Exists, DoesNotExist
+            values:
+            - A
+         - matchExpressions:
+            # Disk != Ssd
+          - key: City
+            operator: NotIn #In, NotIn, Exists, DoesNotExist
+            values:
+            - B           
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeaffinitypod2
+spec:
+  containers:
+  - name: nodeaffinity2
+    image: nginx:1.16-alpine
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: City
+            operator: In
+            values:
+            - A
+      - weight: 2
+        preference:
+          matchExpressions:
+          - key: City
+            operator: In
+            values:
+            - B
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeaffinitypod3
+spec:
+  containers:
+  - name: nodeaffinity3
+    image: nginx:1.16-alpine
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: City
+            operator: Exists #In, NotIn, Exists, DoesNotExist
