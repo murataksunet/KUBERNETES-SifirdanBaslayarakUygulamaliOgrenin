@@ -4,7 +4,7 @@ metadata:
   name: toleratedpod1
 spec:
   containers:
-  - name: toleratedCntr1
+  - name: toleratedcntr1
     image: nginx:1.16-alpine
   tolerations:
   - key: "dedicated"
@@ -18,7 +18,7 @@ metadata:
   name: toleratedpod2
 spec:
   containers:
-  - name: toleratedCntr1
+  - name: toleratedcntr2
     image: nginx:1.16-alpine
   tolerations:
   - key: "dedicated"
