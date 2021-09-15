@@ -11,17 +11,10 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-            # City == A or B
           - key: City
             operator: In #In, NotIn, Exists, DoesNotExist
             values:
             - A
-         - matchExpressions:
-            # Disk != Ssd
-          - key: City
-            operator: NotIn #In, NotIn, Exists, DoesNotExist
-            values:
-            - B           
 ---
 apiVersion: v1
 kind: Pod
