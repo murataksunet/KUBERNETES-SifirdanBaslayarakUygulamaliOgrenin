@@ -11,6 +11,7 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
+        # City == A
           - key: City
             operator: In #In, NotIn, Exists, DoesNotExist
             values:
@@ -30,6 +31,7 @@ spec:
       - weight: 1
         preference:
           matchExpressions:
+          # City == A or City == B or Any Other Node
           - key: City
             operator: In
             values:
@@ -55,5 +57,6 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
+        # City == If Node has this label
           - key: City
             operator: Exists #In, NotIn, Exists, DoesNotExist
