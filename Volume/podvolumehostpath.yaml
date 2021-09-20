@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hostpath
+spec:
+  containers:
+  - name: hostpathcontainer
+    image: nginx
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: directory-vol
+      mountPath: /usr/share/nginx/html
+    - name: dircreate-vol
+      mountPath: /data
+    - name: file-vol
+      mountPath: /data/config.xml    
+  volumes:
+  - name: directory-vol
+    hostPath:
+      path: /tmp/vol/html
+      type: Directory
+  - name: dircreate-vol
+    hostPath:
+      path: /tmp/vol/data
+      type: DirectoryOrCreate
+  - name: file-vol
+    hostPath:
+      path: /tmp/vol/config.xml
+      type: FileOrCreate
