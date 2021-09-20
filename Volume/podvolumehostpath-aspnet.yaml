@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: aspnet-pod-hstpth
+spec:
+  containers:
+  - name: c1
+    image: mcr.microsoft.com/dotnet/core/aspnet
+    command:
+      - "dotnet"
+      - "K8S.dll"
+    workingDir: /data
+    volumeMounts:
+    - name: data-volume
+      mountPath: /data
+    ports:
+      - containerPort: 80
+  volumes:
+  - name: data-volume
+    hostPath:
+      path: /tmp/aspnet
