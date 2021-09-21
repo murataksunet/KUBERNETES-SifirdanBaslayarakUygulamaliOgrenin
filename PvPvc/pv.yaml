@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-   name: mysqlpv
+   name: pvmysql
    labels:
      app: mysql
 spec:
