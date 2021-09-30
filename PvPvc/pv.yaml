@@ -11,8 +11,7 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
   mountOptions:
-   - hard
    - nfsvers=3
   nfs:
-    path: /c/data
-    server: 192.168.99.1
+    server: 192.168.99.124
+    path: /nfs
