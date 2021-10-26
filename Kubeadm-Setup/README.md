@@ -8,7 +8,7 @@ Donanım İhtiyacı
 
 Master: 1 vCPUs - 4GB Ram  
 Worker: 2 vCPUs - 3GB RAM
-OS:     CentOS/RHEL 7
+OS:   CentOS/RHEL 7
 ***
 
 NOT: Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
