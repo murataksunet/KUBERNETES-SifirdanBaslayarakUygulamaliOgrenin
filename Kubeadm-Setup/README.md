@@ -25,15 +25,17 @@ Worker Node 2 Üzerinde
 ***
 
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
--***********************************************************************************************************************************************
- 2. IP Adreslerin Sabitlenmesi.Kendi IP adresinize göre düzenleyin
- Tüm Nodelar Üzerinde
+
+**2. IP Adreslerin Sabitlenmesi.Kendi IP adresinize göre düzenleyin**
+Tüm Nodelar Üzerinde
 cat <<EOF>> /etc/hosts
 192.168.100.120 master-node
 192.168.100.121 worker-node-1
 192.168.100.122 worker-node-2
 EOF
 
+***
+ 
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
 ***********************************************************************************************************************************************
 
