@@ -4,33 +4,33 @@
 . Demo:  "Kubeadm" ile Kubernetes Kurulumu  |  Murat AKSU
 .
 
--***********************************************************************************************************************************************
+-************************************************************************************************************************************************
 
 1. 3 VM - master(1) ve worker(2) nodes Olacak Şekilde Kurulum Yapıyoruz
 
 Donanım İhtiyacı
-----------------------------------------------------
+*----------------------------------------------------
 Master: 1 vCPUs - 4GB Ram  
 Worker: 2 vCPUs - 3GB RAM
 OS:     CentOS/RHEL 7
 
 NOT: Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
-***********************************************************************************************************************************************
+-***********************************************************************************************************************************************
 
-# Master Node Üzerinde
+-# Master Node Üzerinde
 hostnamectl set-hostname master-node
 
-# Worker Node 1 Üzerinde
+-# Worker Node 1 Üzerinde
 hostnamectl set-hostname worker-node-1
 
-# Worker Node 2 Üzerinde
+-# Worker Node 2 Üzerinde
 hostnamectl set-hostname worker-node-2
 
 
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
-***********************************************************************************************************************************************
-# 2. IP Adreslerin Sabitlenmesi.Kendi IP adresinize göre düzenleyin
-# Tüm Nodelar Üzerinde
+-***********************************************************************************************************************************************
+ 2. IP Adreslerin Sabitlenmesi.Kendi IP adresinize göre düzenleyin
+ Tüm Nodelar Üzerinde
 cat <<EOF>> /etc/hosts
 192.168.100.120 master-node
 192.168.100.121 worker-node-1
