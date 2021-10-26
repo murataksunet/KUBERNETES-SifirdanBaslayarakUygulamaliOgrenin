@@ -3,27 +3,25 @@
 ***
 
 **1. 3 VM - master(1) ve worker(2) nodes Olacak Şekilde Kurulum Yapıyoruz**
-
 Donanım İhtiyacı
 
 Master: 1 vCPUs - 4GB Ram  
 Worker: 2 vCPUs - 3GB RAM
 OS:     CentOS/RHEL 7
-
 ***
 
 NOT: Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
--***********************************************************************************************************************************************
 
--# Master Node Üzerinde
-hostnamectl set-hostname master-node
+Master Node Üzerinde
+```hostnamectl set-hostname master-node```
 
--# Worker Node 1 Üzerinde
-hostnamectl set-hostname worker-node-1
+Worker Node 1 Üzerinde
+```hostnamectl set-hostname worker-node-1```
 
--# Worker Node 2 Üzerinde
-hostnamectl set-hostname worker-node-2
+Worker Node 2 Üzerinde
+```hostnamectl set-hostname worker-node-2```
 
+***
 
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
 -***********************************************************************************************************************************************
