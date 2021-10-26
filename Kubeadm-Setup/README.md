@@ -1,18 +1,14 @@
 
--***********************************************************************************************************************************************
-.
-. Demo:  "Kubeadm" ile Kubernetes Kurulumu  |  Murat AKSU
-.
+**Demo:  "Kubeadm" ile Kubernetes Kurulumu  |  Murat AKSU**
+***
 
--************************************************************************************************************************************************
-
-1. 3 VM - master(1) ve worker(2) nodes Olacak Şekilde Kurulum Yapıyoruz
-
+**1. 3 VM - master(1) ve worker(2) nodes Olacak Şekilde Kurulum Yapıyoruz**
 Donanım İhtiyacı
-*----------------------------------------------------
+
 Master: 1 vCPUs - 4GB Ram  
 Worker: 2 vCPUs - 3GB RAM
 OS:     CentOS/RHEL 7
+***
 
 NOT: Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
 -***********************************************************************************************************************************************
