@@ -31,10 +31,10 @@ NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştı
 Tüm Nodelar Üzerinde
 
 cat <<EOF>> /etc/hosts
-192.168.100.120 master-node
-192.168.100.121 worker-node-1
-192.168.100.122 worker-node-2
-EOF
+ 192.168.100.120 master-node
+ 192.168.100.121 worker-node-1
+ 192.168.100.122 worker-node-2
+ EOF
  
  
 ***
