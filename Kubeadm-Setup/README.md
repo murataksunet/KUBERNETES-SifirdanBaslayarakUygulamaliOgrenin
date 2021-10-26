@@ -35,7 +35,8 @@ cat <<EOF>> /etc/hosts
 192.168.100.121 worker-node-1
 192.168.100.122 worker-node-2
 EOF
-
+ 
+ 
 ***
  
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
