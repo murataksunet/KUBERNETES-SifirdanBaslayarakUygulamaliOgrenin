@@ -1,3 +1,16 @@
-1- Kubernetes cluster üzerinde ki config dosyasını listele
-2- Sistem de çalışan Docker Deskop üzerine geçiş yaptıran komutunu yazın
-3-
+Kubernetes cluster üzerinde ki config dosyasını listele
+Sistem de çalışan Docker Deskop üzerine geçiş yaptıran komutunu yazın
+Windows üzerinde kubectl'i k kısayolu haline getirin
+Kubernetes cluster durumunu kontrol edin
+Kubernetes versiyon bilgisini görüntüleyin
+CLusterdaki nodeları listeleyin
+Clusterdaki namespaceleri,deployment,servisleri aynı komut satırında listeleyin
+Clusterdaki tüm nesneleri listeleyin
+Cluster üzerinde çalışan tüm podları listeleyin
+Cluster  üzerindeki çalışan tüm podları ip bilgisiyle birlikte görüntüleyin
+Çalışan bir podu yaml dosyası çıktısına çevirin
+Çalışan Node'un detaylarını görüntüleyin
+Çalışan bir podun detaylarına görüntüleyin
+Pod nesnesinin özelliklerini görüntüleyin
+Deployment nesnesinin özelliklerini görüntüleyin
+
