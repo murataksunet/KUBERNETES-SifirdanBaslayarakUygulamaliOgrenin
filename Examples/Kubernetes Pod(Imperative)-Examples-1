@@ -18,7 +18,7 @@ myweb poduna bağlanmadan date bilgisini alın ve root dizinini listeleyin
 myweb poduna giriş yapıp root(/) dizininde storage adinda bir folder oluşturun. Bu folder içerisinde password adinda bir file oluşturun
 Pod içerisinde oluşturduğunuz password dosyasını lokal bilgisayarına kopyalayın.
 Lokalde index.html adında bir dosya oluşturun. Bu dosyayı myweb podunun yayın yapılan dosyası üzerine kopyalayın
-myweb poduna browserdan erişip kontrol edebilmek için port yönlendirme işlemini yapıp sayfanızın gelip gelmediğini test edin
+myweb-1 poduna browserdan erişip kontrol edebilmek için port yönlendirme işlemini yapıp sayfanızın gelip gelmediğini test edin
 Mariadb imageını kullanan ismi mymariadb olan bir pod oluşturun. Root password bilgisini ekleyin. 
 komut satırında mymariadb podunun loglarını görüntüleyin
 minikube üzerinde dashboard ekranında mymariadb podu loglarına görüntüleyin.
@@ -36,8 +36,14 @@ minikube üzerine python imageını indirin
 Pyhton imageını kullanarak mypython adında yeni bir pod oluşturun
 mypython podu içerisine bağlanın ve python uygulamasına geçiş yapın
 
-
-
+myweb-2 , myweb-3, myweb-4 adında nginx podu oluşturun. Restart özelliğini never olarak atayın. Label olarak env=production etiketini ekleyin
+Cluster içerisinde tüm podların labellarını listeleyin
+myweb-2 label bilgisini env=demo şeklinde değiştirin.
+Tüm podlar'a status=healty etiketini ekleyin
+env=demo olan podları listeleyin
+env=production olmayan podları listeleyin. ( Set-based )
+status=healty olan env=demo podları listeleyin 
+env=production podları labelı kullanarak silin
 
 mymariadb podunu silin
 
