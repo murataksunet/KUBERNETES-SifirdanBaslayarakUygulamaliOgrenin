@@ -14,17 +14,29 @@ Cluster  üzerindeki çalışan tüm podları ip bilgisiyle birlikte görüntül
 Pod nesnesinin özelliklerini görüntüleyin
 Deployment nesnesinin özelliklerini görüntüleyin
 myweb adinda nginx image'ını kullanan bir pod oluşturun
+myweb poduna bağlanmadan date bilgisini alın ve root dizinini listeleyin
 myweb poduna giriş yapıp root(/) dizininde storage adinda bir folder oluşturun. Bu folder içerisinde password adinda bir file oluşturun
 Pod içerisinde oluşturduğunuz password dosyasını lokal bilgisayarına kopyalayın.
 Lokalde index.html adında bir dosya oluşturun. Bu dosyayı myweb podunun yayın yapılan dosyası üzerine kopyalayın
 myweb poduna browserdan erişip kontrol edebilmek için port yönlendirme işlemini yapıp sayfanızın gelip gelmediğini test edin
-
-
-
 Mariadb imageını kullanan ismi mymariadb olan bir pod oluşturun. Root password bilgisini ekleyin. 
-mymariadb podunun loglarını görüntüleyin
+komut satırında mymariadb podunun loglarını görüntüleyin
 minikube üzerinde dashboard ekranında mymariadb podu loglarına görüntüleyin.
 mymariadb databaseine dışarıdan uygulama üzerinden erişmek için port yönlendirme işleminini yapın. Uygulama üzerinden test işlemini yapın
+
+minikube durum bilgisini görüntüleyin
+minikube vm üzerine giriş yapın
+minikube dashboard urlini görüntüleyin.
+
+minikube üzerinde ki nodeları listeleyin
+minikube üzerine yeni node ekleme komutunu yazın
+
+minikube üzerindeki indirilen imageları listeleyin
+minikube üzerine python imageını indirin
+Pyhton imageını kullanarak mypython adında yeni bir pod oluşturun
+mypython podu içerisine bağlanın ve python uygulamasına geçiş yapın
+
+
 
 
 mymariadb podunu silin
