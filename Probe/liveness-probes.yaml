@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: liveness-demo
+  name: liveness-command-exec
   namespace: default
 spec:
   containers:
@@ -23,7 +23,7 @@ metadata:
   name: liveness-http
 spec: 
   containers: 
-  - name: liveness 
+  - name: liveness-http
     image: nginx 
     ports: 
         - containerPort: 80 
@@ -43,7 +43,7 @@ metadata:
   name: liveness-tcpsocket
 spec: 
   containers: 
-  - name: liveness 
+  - name: liveness-tcpsocket
     image: nginx 
     ports: 
         - containerPort: 80 
