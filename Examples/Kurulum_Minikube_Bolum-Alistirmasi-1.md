@@ -2,7 +2,7 @@
 
 ## Lütfen aşağıdaki alıştırmayı demo ortamınızda sırasıyla uygulayınız
 
-### minikube durum bilgisini görüntüleyin
+### 1- minikube durum bilgisini görüntüleyin
 
 <details><summary>show</summary>
 <p>
@@ -14,7 +14,7 @@ minikube status
 </p>
 </details>
 
-### minikube üzerindeki lokal cluster'ı silin
+### 2- minikube üzerindeki lokal cluster'ı silin
 
 <details><summary>show</summary>
 <p>
@@ -26,7 +26,7 @@ minikube delete
 </p>
 </details>
 
-### minikube üzerinde yeni bir lokal cluster oluşturun
+### 3- minikube üzerinde yeni bir lokal cluster oluşturun
 <details><summary>show</summary>
 <p>
 
@@ -37,7 +37,7 @@ minikube start
 </p>
 </details>
 
-### minikube üzerinde control plane ve worker node ekleyin (araştır). Tüm node Ip'lerini listeleyin.
+### 4- minikube üzerinde control plane ve worker node ekleyin (araştır). Tüm node Ip'lerini listeleyin.
 <details><summary>show</summary>
 <p>
 
@@ -50,7 +50,7 @@ minikube ip
 </p>
 </details>
 
-### minikube üzerinde node listelemesi yapın ve silin
+### 5- minikube üzerinde node listelemesi yapın ve silin
 <details><summary>show</summary>
 <p>
 
@@ -62,7 +62,7 @@ minikube node delete
 </p>
 </details>
 
-### minikube kaynaklarına (sanal makinasına-VM) login olun 
+### 6- minikube kaynaklarına (sanal makinasına-VM) login olun 
 <details><summary>show</summary>
 <p>
 
@@ -73,7 +73,7 @@ minikube ssh
 </p>
 </details>
 
-### minikube üzerindeki Kubernetes dashboard ekranına erişin
+### 7- minikube üzerindeki Kubernetes dashboard ekranına erişin
 <details><summary>show</summary>
 <p>
 
@@ -85,7 +85,7 @@ minikube dashboard
 </details>
 
 
-### minikube üzerindeki imagelari listeleyin
+### 8- minikube üzerindeki imagelari listeleyin
 <details><summary>show</summary>
 <p>
 
@@ -97,7 +97,7 @@ minikube image ls
 </details>
 
 
-### minikube üzerine python image'ını indirin ve silin
+### 9- minikube üzerine python image'ını indirin ve silin
 <details><summary>show</summary>
 <p>
 
@@ -110,7 +110,7 @@ minikube image rm image python
 </details>
 
 
-### minikube üzerine lokalde cachede bulunan imageları listele, yenide yükle ve sil 
+### 10- minikube üzerine lokalde cachede bulunan imageları listele, yenide yükle ve sil 
 <details><summary>show</summary>
 <p>
 
