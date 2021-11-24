@@ -62,16 +62,24 @@ minikube node delete
 </p>
 </details>
 
-### minikube üzerinde control plane ve worker node ekleyin (araştır)
+### minikube kaynaklarına (sanal makinasına-VM) login olun 
 <details><summary>show</summary>
 <p>
 
 ```bash
-minikube node add --control-plane
-minikube node add --worker
+minikube ssh
 ```
 
 </p>
 </details>
 
+### minikube üzerindeki Kubernetes dashboard ekranına erişin
+<details><summary>show</summary>
+<p>
 
+```bash
+minikube dashboard
+```
+
+</p>
+</details>
