@@ -122,3 +122,5 @@ minikube cache delete
 
 </p>
 </details>
+
+Daha fazlası: https://minikube.sigs.k8s.io/docs/commands/
