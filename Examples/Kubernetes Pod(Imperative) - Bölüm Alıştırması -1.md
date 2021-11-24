@@ -109,3 +109,16 @@ minikube image rm image python
 </p>
 </details>
 
+
+### minikube üzerine lokalde cachede bulunan imageları listele, yenide yükle ve sil 
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube cache list
+minikube cache reload
+minikube cache delete 
+```
+
+</p>
+</details>
