@@ -36,3 +36,15 @@ minikube start
 
 </p>
 </details>
+
+### minikube üzerinde control plane ve worker node ekleyin (araştır)
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube node add --control-plane
+minikube node add --worker
+```
+
+</p>
+</details>
