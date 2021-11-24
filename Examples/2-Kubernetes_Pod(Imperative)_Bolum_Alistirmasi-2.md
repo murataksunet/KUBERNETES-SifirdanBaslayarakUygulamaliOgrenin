@@ -80,7 +80,24 @@ kubectl get po --show-labels
 <p>
 
 ```bash
-kubectl get po --show-labels
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeaffinitypod1
+spec:
+  containers:
+  - name: nodeaffinity1
+    image: nginx:1.16-alpine
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+        # City == A
+          - key: City
+            operator: In #In, NotIn, Exists, DoesNotExist
+            values:
+            - A
 ```
 
 </p>
