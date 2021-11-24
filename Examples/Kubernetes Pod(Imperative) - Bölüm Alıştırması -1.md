@@ -37,6 +37,31 @@ minikube start
 </p>
 </details>
 
+### minikube üzerinde control plane ve worker node ekleyin (araştır). Tüm node Ip'lerini listeleyin.
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube node add --control-plane
+minikube node add --worker
+minikube ip
+```
+
+</p>
+</details>
+
+### minikube üzerinde node listelemesi yapın ve silin
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube node list
+minikube node delete
+```
+
+</p>
+</details>
+
 ### minikube üzerinde control plane ve worker node ekleyin (araştır)
 <details><summary>show</summary>
 <p>
@@ -48,3 +73,5 @@ minikube node add --worker
 
 </p>
 </details>
+
+
