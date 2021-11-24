@@ -1,6 +1,6 @@
 # Minikube
 
-## Lütfen aşağıdaki alıştırmayı sırasıyla yapınız!
+## Lütfen aşağıdaki alıştırmayı demo ortamınızda sırasıyla uygulayınız
 
 ### minikube durum bilgisini görüntüleyin
 
