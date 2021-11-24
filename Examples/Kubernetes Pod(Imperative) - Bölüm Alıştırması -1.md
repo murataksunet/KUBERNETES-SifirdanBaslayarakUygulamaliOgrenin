@@ -83,3 +83,29 @@ minikube dashboard
 
 </p>
 </details>
+
+
+### minikube üzerindeki imagelari listeleyin
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube image ls
+```
+
+</p>
+</details>
+
+
+### minikube üzerine python image'ını indirin ve silin
+<details><summary>show</summary>
+<p>
+
+```bash
+minikube image pull python
+minikube image rm image python
+```
+
+</p>
+</details>
+
