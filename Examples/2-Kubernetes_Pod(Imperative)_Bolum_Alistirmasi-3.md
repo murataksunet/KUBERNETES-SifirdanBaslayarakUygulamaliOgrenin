@@ -136,3 +136,17 @@ kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yaml
 
 </p>
 </details>
+
+
+### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan(araştır)). Loglarini listele (araştır)
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run busybox --image=busybox --command --restart=Never -- env
+kubectl logs busybox
+```
+
+</p>
+</details>
