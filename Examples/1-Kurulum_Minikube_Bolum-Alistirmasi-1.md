@@ -26,24 +26,37 @@ minikube delete
 </p>
 </details>
 
-### 3- minikube üzerinde yeni bir lokal cluster oluşturun
+### 3- minikube üzerinde yeni bir lokal cluster oluşturun. Veya 2 node'lu bir cluster kurun. 
 <details><summary>show</summary>
 <p>
 
 ```bash
 minikube start
+#veya
+minikube start --nodes 2 -p multinode-demo
 ```
 
 </p>
 </details>
 
-### 4- minikube üzerinde control plane ve worker node ekleyin (araştır). Tüm node Ip'lerini listeleyin.
+### 4- Cluster'a control plane veya worker node olarak ekleyin (araştır). 
 <details><summary>show</summary>
 <p>
 
 ```bash
 minikube node add --control-plane
 minikube node add --worker
+```
+
+</p>
+</details>
+
+
+### Tüm node Ip'lerini listeleyin.
+<details><summary>show</summary>
+<p>
+
+```bash
 minikube ip
 ```
 
