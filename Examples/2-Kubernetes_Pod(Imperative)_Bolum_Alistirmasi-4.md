@@ -183,3 +183,17 @@ kubectl delete pods -l "env=production"
 </p>
 </details>
 
+### node ismi alomerkez olan node'a disktype=ssd etiketi ekleyin. Görüntüleyin
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl label nodes alomerkez disktype=ssd
+kubectl describe node alomerkez
+#veya
+kubectl get nodes --show-labels
+```
+
+</p>
+</details>
