@@ -73,3 +73,42 @@ kubectl port-forward mymariadb 8080:80
 
 </p>
 </details>
+
+
+### busybox image'ını kullanan ve ekrana hello world yazdıran pod oluşturun. İşlem tamamlandığında pod silinsin.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run busybox --image=busybox -it --rm --restart=Never -- /bin/sh -c 'echo hello world'
+```
+
+</p>
+</details>
+
+
+### nginx image'ını kullanan yeni bir pod oluşturun. Env bilgisi olarak var=vol1 bilgisini ekleyin
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run nginx --image=nginx --restart=Never --env=var1=val1
+```
+
+</p>
+</details>
+
+### nginx image'ını kullanan yeni bir pod oluşturun. Env bilgisi olarak var=vol1 bilgisini ekleyin. Pod içerisine girmeden env bilgisini listeleyin
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run nginx --image=nginx --restart=Never --env=var1=val1
+kubectl exec -it nginx -- env
+```
+
+</p>
+</details>
