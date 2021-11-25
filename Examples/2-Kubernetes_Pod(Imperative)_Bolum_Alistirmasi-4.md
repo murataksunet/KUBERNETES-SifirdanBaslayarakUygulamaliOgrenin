@@ -137,7 +137,7 @@ kubectl label po nginx{1..3} app-
 <p>
 
 ```bash
-
+kubectl label pods --all status=healthy
 ```
 
 </p>
@@ -157,14 +157,15 @@ kubectl logs busybox
 </p>
 </details>
 
-### status=healty olan env=demo podları listeleyin 
+### status=healty olan env!=demo podları listeleyin.Her iki yazım şekliyle yazın
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl run busybox --image=busybox --restart=Never --dry-run -o yaml --command  -- env > envpod.yaml
-cat envpod.yaml
+kubectl get po -l "status=healty,env!=demo"
+#veya
+kubectl get po -l "status in (healty),env notin (demo)"
 ```
 
 </p>
@@ -176,8 +177,7 @@ cat envpod.yaml
 <p>
 
 ```bash
-kubectl run busybox --image=busybox --restart=Never --dry-run -o yaml --command  -- env > envpod.yaml
-cat envpod.yaml
+kubectl delete pods -l "env=production"
 ```
 
 </p>
