@@ -140,3 +140,15 @@ kubectl port-forward myweb 8080:80
 
 </p>
 </details>
+
+### myweb poduna silin
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl delete pod myweb
+```
+
+</p>
+</details>
