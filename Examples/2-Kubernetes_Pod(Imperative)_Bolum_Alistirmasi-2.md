@@ -1,4 +1,4 @@
-# Kubernetes Pod(Imperative) - CLI- Hadi Başlıyalım - Bölüm Alıştırması - 2
+# Kubernetes Pod(Imperative) - Hadi Başlıyalım - Bölüm Alıştırması - 2
 
 ## Lütfen aşagıdaki alıştırmalari demo sisteminizde cevaplandiriniz
 
