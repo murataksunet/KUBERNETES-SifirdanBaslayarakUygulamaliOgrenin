@@ -45,6 +45,7 @@ minikube start --nodes 2 -p multinode-demo
 
 ```bash
 minikube node add --control-plane
+#veya
 minikube node add --worker
 ```
 
@@ -69,7 +70,7 @@ minikube ip
 
 ```bash
 minikube node list
-minikube node delete
+minikube node delete <node isim>
 ```
 
 </p>
