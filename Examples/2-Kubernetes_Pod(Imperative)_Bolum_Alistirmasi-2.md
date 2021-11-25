@@ -1,6 +1,6 @@
 # Kubernetes Pod(Imperative) - CLI- Hadi Başlıyalım
 
-## Labels and annotations
+## Lütfen aşagıdaki alıştırmalari demo sisteminizde cevaplandiriniz
 
 ### Kubernetes cluster üzerinde ki config dosyasını listele
 
