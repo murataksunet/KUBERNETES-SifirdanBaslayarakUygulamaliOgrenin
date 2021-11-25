@@ -197,3 +197,16 @@ kubectl get nodes --show-labels
 
 </p>
 </details>
+
+
+### alomerkez node üzerine eklediğiniz disktype=ssd etiketi kaldırın
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl label node alomerkez disktype-
+```
+
+</p>
+</details>
