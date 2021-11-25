@@ -112,3 +112,15 @@ kubectl exec -it nginx -- env
 
 </p>
 </details>
+
+### nginx image'ini yaml dosyası şeklinde çıktı alın ve text.txt dosyasina aktarına
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl get po nginx -o yaml >>text.txt
+```
+
+</p>
+</details>
