@@ -40,109 +40,111 @@ echo $name
 </p>
 </details>
 
-### Yaml dosyasi oluturma. busybox image'ını kullanan vaybe adinda bir pod oluşturun. Pod içerisinde sonraki komutunu çalıştırın. Çıktıyı vaybe.yaml dosyasına aktarın."while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;"
+### Yaml dosyasi oluturma. busybox image'ını kullanan vaybe adinda bir pod oluşturun. Pod içerisinde sonraki komutunu çalıştırın. Çıktıyı vaybe.yaml dosyasına aktarın.Görünüleyin"while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;"
 
 <details><summary>show</summary>
 <p>
 
 ```bash
 kubectl run vaybe --image=busybox --restart=Never -o yaml --dry-run -- /bin/sh -c 'while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;' > vaybe.yaml
+cat vaybe.yaml
 ```
 
 </p>
 </details>
 
-### Minikube üzerinde dashboard ekranında mymariadb podu loglarına görüntüleyin.
+### Tüm namespacelerde bulunan podlardaki label'ları listeleyin
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-minikube dashboard
-#Sol bölümden pod sekmesine girip mymariadb erişin ve log sekmesini açın
+kubectl get nodes --show-labels --all-namespaces
 ```
 
 </p>
 </details>
 
-### mymariadb databaseine dışarıdan uygulama üzerinden erişmek için port yönlendirme işleminini yapın. Uygulama üzerinden test işlemini yapın
+### Node'lar üzerindeki label'ları listeleyin
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl port-forward mymariadb 8080:80
+kubectl get pods --show-labels
 ```
 
 </p>
 </details>
 
 
-### busybox image'ını kullanan ve ekrana hello world yazdıran pod oluşturun. İşlem tamamlandığında pod silinsin.
+### nginx2 podunun label'ını app=demo olarak etiketleyin
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl run busybox --image=busybox -it --rm --restart=Never -- /bin/sh -c 'echo hello world'
+kubectl label po nginx2 app=demo --overwrite
 ```
 
 </p>
 </details>
 
 
-### nginx image'ını kullanan yeni bir pod oluşturun. Env bilgisi olarak var=vol1 bilgisini ekleyin
+### app etiketine sahip podları listeleyin
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl run nginx --image=nginx --restart=Never --env=var1=val1
+kubectl get po -L app
 ```
 
 </p>
 </details>
 
-### nginx image'ını kullanan yeni bir pod oluşturun. Env bilgisi olarak var=vol1 bilgisini ekleyin. Pod içerisine girmeden env bilgisini listeleyin
+### app=demo olan podu listeleyin.Her iki yazım şeklinide kullanın
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl run nginx --image=nginx --restart=Never --env=var1=val1
-kubectl exec -it nginx -- env
+kubectl get po -l app=demo
+# or
+kubectl get po -l 'app in (demo)'
 ```
 
 </p>
 </details>
 
-### nginx image'ini yaml formatı şeklinde text.txt dosyasina aktarına
+### app label'ına sahip podlardaki app etiketini kaldırın (araştır)
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl get po nginx -o yaml >>text.txt
+kubectl label po nginx1 nginx2 nginx3 app-
+# veya
+kubectl label po nginx{1..3} app-
 ```
 
 </p>
 </details>
 
-### Nginx image'ını daha anlaşılır API nesneleri olmadan pod.yaml dosyasina yazdırın (araştır).Görüntüle
+### Tüm podlar'a status=healty etiketini ekleyin
 
 <details><summary>show</summary>
 <p>
 
 ```bash
-kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yaml
-cat pod.yaml
+
 ```
 
 </p>
 </details>
 
 
-### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan(araştır)). Loglarini listele
+### nginx1 Podunu editleyin ve team=dev etiketini ekleyin. Podu detaylandırına bakıp etiketi görün
 
 <details><summary>show</summary>
 <p>
@@ -155,7 +157,7 @@ kubectl logs busybox
 </p>
 </details>
 
-### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan). yaml dosyasına API nesneleri olmadan aktar. Görüntüle.
+### status=healty olan env=demo podları listeleyin 
 
 <details><summary>show</summary>
 <p>
@@ -167,3 +169,17 @@ cat envpod.yaml
 
 </p>
 </details>
+
+### env=production olan labela sahip podları silin
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run busybox --image=busybox --restart=Never --dry-run -o yaml --command  -- env > envpod.yaml
+cat envpod.yaml
+```
+
+</p>
+</details>
+
