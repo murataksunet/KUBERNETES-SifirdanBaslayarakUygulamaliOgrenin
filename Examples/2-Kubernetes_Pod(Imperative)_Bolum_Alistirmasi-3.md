@@ -125,20 +125,21 @@ kubectl get po nginx -o yaml >>text.txt
 </p>
 </details>
 
-### Nginx image'ını daha anlaşılır API nesneleri olmadan pod.yaml dosyasina yazdırın (araştır)
+### Nginx image'ını daha anlaşılır API nesneleri olmadan pod.yaml dosyasina yazdırın (araştır).Görüntüle
 
 <details><summary>show</summary>
 <p>
 
 ```bash
 kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yaml
+cat pod.yaml
 ```
 
 </p>
 </details>
 
 
-### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan(araştır)). Loglarini listele (araştır)
+### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan(araştır)). Loglarini listele
 
 <details><summary>show</summary>
 <p>
@@ -146,6 +147,19 @@ kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml > pod.yaml
 ```bash
 kubectl run busybox --image=busybox --command --restart=Never -- env
 kubectl logs busybox
+```
+
+</p>
+</details>
+
+### env komutunu çalıştıran yeni bir busybox pod oluştur(command komutu kullan). yaml dosyasına API nesneleri olmadan aktar. Görüntüle.
+
+<details><summary>show</summary>
+<p>
+
+```bash
+kubectl run busybox --image=busybox --restart=Never --dry-run -o yaml --command  -- env > envpod.yaml
+cat envpod.yaml
 ```
 
 </p>
