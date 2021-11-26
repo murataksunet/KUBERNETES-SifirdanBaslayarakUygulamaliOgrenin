@@ -1,6 +1,6 @@
 # Kubernetes Pod(Imperative) - Hadi Başlıyalım - Bölüm Alıştırması - 4
 
-### nginx1,nginx2,nginx3 adlarıyla 3 adet pod oluşturun. Hepsine app=production label ekleyin.
+#### nginx1,nginx2,nginx3 adlarıyla 3 adet pod oluşturun. Hepsine app=production label ekleyin.
 
 <details><summary>show</summary>
 <p>
