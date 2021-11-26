@@ -14,7 +14,7 @@ kubectl run nginx3 --image=nginx --restart=Never --labels=app=production
 </p>
 </details>
 
-### JSON formatını kullanarak tüm podlari lisleteyin(araştır)
+#### JSON formatını kullanarak tüm podlari lisleteyin(araştır)
 
 <details><summary>show</summary>
 <p>
@@ -27,7 +27,7 @@ kubectl get pods -o=jsonpath="{.items[*]['metadata.name']}"
 </details>
 
 
-### JSON formatını kullarak 1.podun ismini name değişkenine aktarın ve görüntüleyin
+#### JSON formatını kullarak 1.podun ismini name değişkenine aktarın ve görüntüleyin
 
 <details><summary>show</summary>
 <p>
@@ -40,7 +40,7 @@ echo $name
 </p>
 </details>
 
-### Yaml dosyasi oluturma. busybox image'ını kullanan vaybe adinda bir pod oluşturun. Pod içerisinde sonraki komutunu çalıştırın. Çıktıyı vaybe.yaml dosyasına aktarın.Görünüleyin"while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;"
+#### Yaml dosyasi oluturma. busybox image'ını kullanan vaybe adinda bir pod oluşturun. Pod içerisinde sonraki komutunu çalıştırın. Çıktıyı vaybe.yaml dosyasına aktarın.Görünüleyin"while true; do echo "$(date) | $(du -sh ~)" >> /var/logs/diskspace.txt; sleep 5; done;"
 
 <details><summary>show</summary>
 <p>
@@ -53,7 +53,7 @@ cat vaybe.yaml
 </p>
 </details>
 
-### Tüm namespacelerde bulunan podlardaki label'ları listeleyin
+#### Tüm namespacelerde bulunan podlardaki label'ları listeleyin
 
 <details><summary>show</summary>
 <p>
@@ -65,7 +65,7 @@ kubectl get nodes --show-labels --all-namespaces
 </p>
 </details>
 
-### Node'lar üzerindeki label'ları listeleyin
+#### Node'lar üzerindeki label'ları listeleyin
 
 <details><summary>show</summary>
 <p>
@@ -78,7 +78,7 @@ kubectl get pods --show-labels
 </details>
 
 
-### nginx2 podunun label'ını app=demo olarak etiketleyin
+#### nginx2 podunun label'ını app=demo olarak etiketleyin
 
 <details><summary>show</summary>
 <p>
@@ -91,7 +91,7 @@ kubectl label po nginx2 app=demo --overwrite
 </details>
 
 
-### app etiketine sahip podları listeleyin
+#### app etiketine sahip podları listeleyin
 
 <details><summary>show</summary>
 <p>
@@ -103,7 +103,7 @@ kubectl get po -L app
 </p>
 </details>
 
-### app=demo olan podu listeleyin.Her iki yazım şeklinide kullanın
+#### app=demo olan podu listeleyin.Her iki yazım şeklinide kullanın
 
 <details><summary>show</summary>
 <p>
@@ -117,7 +117,7 @@ kubectl get po -l 'app in (demo)'
 </p>
 </details>
 
-### app label'ına sahip podlardaki app etiketini kaldırın (araştır)
+#### app label'ına sahip podlardaki app etiketini kaldırın (araştır)
 
 <details><summary>show</summary>
 <p>
@@ -131,7 +131,7 @@ kubectl label po nginx{1..3} app-
 </p>
 </details>
 
-### Tüm podlar'a status=healty etiketini ekleyin
+#### Tüm podlar'a status=healty etiketini ekleyin
 
 <details><summary>show</summary>
 <p>
@@ -144,7 +144,7 @@ kubectl label pods --all status=healthy
 </details>
 
 
-### nginx1 Podunu editleyin ve team=dev etiketini ekleyin. Podu detaylandırına bakıp etiketi görün
+#### nginx1 Podunu editleyin ve team=dev etiketini ekleyin. Podu detaylandırına bakıp etiketi görün
 
 <details><summary>show</summary>
 <p>
@@ -157,7 +157,7 @@ kubectl logs busybox
 </p>
 </details>
 
-### status=healty olan env!=demo podları listeleyin.Her iki yazım şekliyle yazın
+#### status=healty olan env!=demo podları listeleyin.Her iki yazım şekliyle yazın
 
 <details><summary>show</summary>
 <p>
@@ -171,7 +171,7 @@ kubectl get po -l "status in (healty),env notin (demo)"
 </p>
 </details>
 
-### env=production olan labela sahip podları silin
+#### env=production olan labela sahip podları silin
 
 <details><summary>show</summary>
 <p>
@@ -183,7 +183,7 @@ kubectl delete pods -l "env=production"
 </p>
 </details>
 
-### node ismi alomerkez olan node'a disktype=ssd etiketi ekleyin. Görüntüleyin
+#### node ismi alomerkez olan node'a disktype=ssd etiketi ekleyin. Görüntüleyin
 
 <details><summary>show</summary>
 <p>
@@ -199,7 +199,7 @@ kubectl get nodes --show-labels
 </details>
 
 
-### alomerkez node üzerine eklediğiniz disktype=ssd etiketi kaldırın
+#### alomerkez node üzerine eklediğiniz disktype=ssd etiketi kaldırın
 
 <details><summary>show</summary>
 <p>
