@@ -1,4 +1,4 @@
-# Kubernetes Pod(Declarative)-YAML-Eğlenceye Devam-Bölüm Alıştırması-4
+# Kubernetes Pod(Declarative) - YAML - Bölüm Alıştırması - 4
 
 #### nginx1,nginx2,nginx3 adlarıyla 3 adet pod oluşturun. Hepsine app=production label ekleyin.
 
