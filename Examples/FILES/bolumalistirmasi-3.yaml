@@ -6,7 +6,7 @@ metadata:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webnginx
+  name: webpod
   labels:
     app: nginx
 spec:
@@ -20,7 +20,7 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: c1
+      - name: webcontainer
         image: nginx
         ports:
         - containerPort: 80
