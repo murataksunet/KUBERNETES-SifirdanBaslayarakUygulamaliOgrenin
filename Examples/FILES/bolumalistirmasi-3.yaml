@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: project
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webnginx
+  labels:
+    app: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: c1
+        image: nginx
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mixpod
+spec:
+  containers:
+  - name: container-1
+    image: alpine
+  - name: container-2
+    image: busybox
+  - name: crazycontainer
+    image: xnginxx
