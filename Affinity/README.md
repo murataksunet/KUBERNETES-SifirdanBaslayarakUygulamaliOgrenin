@@ -1,1 +1,1 @@
-1
+Node ve Pod Affinity
