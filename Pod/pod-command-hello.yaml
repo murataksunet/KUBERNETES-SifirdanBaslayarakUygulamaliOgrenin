@@ -9,4 +9,4 @@ spec:
     command:
     - /bin/bash
     - -ec
-    - while :; do echo 'HELLOOO WORLD'; sleep 1; done
+    - while :; do echo 'HELLOOO WORLD'; sleep 3; done
