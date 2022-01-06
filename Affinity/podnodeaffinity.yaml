@@ -11,11 +11,11 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-        # City == A
+        # City == Ankara
           - key: City
             operator: In #In, NotIn, Exists, DoesNotExist
             values:
-            - A
+            - Ankara
 ---
 apiVersion: v1
 kind: Pod
@@ -31,18 +31,18 @@ spec:
       - weight: 1
         preference:
           matchExpressions:
-          # City == A or City == B or Any Other Node
+          # City == Istanbul or City == Ankara or Any Other Node
           - key: City
             operator: In
             values:
-            - A
+            - Ankara
       - weight: 2
         preference:
           matchExpressions:
           - key: City
             operator: In
             values:
-            - B
+            - Istanbul
 ---
 apiVersion: v1
 kind: Pod
@@ -57,6 +57,6 @@ spec:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-        # City == If Node has this label
-          - key: City
+        # Zone == If Node has this label
+          - key: zone
             operator: Exists #In, NotIn, Exists, DoesNotExist
