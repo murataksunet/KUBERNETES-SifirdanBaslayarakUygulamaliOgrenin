@@ -58,5 +58,5 @@ spec:
         nodeSelectorTerms:
         - matchExpressions:
         # Zone == If Node has this label
-          - key: zone
+          - key: Zone
             operator: Exists #In, NotIn, Exists, DoesNotExist
