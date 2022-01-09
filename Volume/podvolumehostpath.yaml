@@ -12,7 +12,7 @@ spec:
     - name: directory-vol
       mountPath: /usr/share/nginx/html
     - name: dircreate-vol
-      mountPath: /data
+      mountPath: /storage
     - name: file-vol
       mountPath: /data/config.xml    
   volumes:
@@ -22,9 +22,9 @@ spec:
       type: Directory
   - name: dircreate-vol
     hostPath:
-      path: /tmp/vol/data
+      path: /tmp/vol/storage
       type: DirectoryOrCreate
   - name: file-vol
     hostPath:
-      path: /tmp/vol/config.xml
+      path: /tmp/vol/data/config.xml
       type: FileOrCreate
