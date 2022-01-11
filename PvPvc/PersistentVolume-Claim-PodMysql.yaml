@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: pervolume001
   labels:
-    tier: pv001
+    type: pv001
 spec:
   capacity:
     storage: 5Gi
