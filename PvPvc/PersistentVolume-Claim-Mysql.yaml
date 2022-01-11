@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pervolume001
+  labels:
+    tier: pv001
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Recycle
+  volumeMode: Filesystem
+  hostPath:
+    path: "/mnt/data"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pervolume001-mysql-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 3Gi
+  volumeMode: Filesystem
+  storageClassName: ""
+  selector:
+    matchLabels:
+      type: pv001
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pv001-mysql-pod
+  labels:
+    app: mysql
+spec:
+  containers:
+  - name: mysql
+    image: mysql:latest
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: onetwothree123!
+    ports:
+    - name: mysql
+      containerPort: 3306
+      protocol: TCP
+    volumeMounts:
+    - name: mysql-volume
+      mountPath: /var/lib/mysql
+  volumes:
+  - name: mysql-volume
+    persistentVolumeClaim:
+      claimName: pervolume001-mysql-claim
