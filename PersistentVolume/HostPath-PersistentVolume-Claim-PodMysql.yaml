@@ -9,7 +9,7 @@ spec:
     storage: 10Gi
   accessModes:
     - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Recycle
+  persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   hostPath:
     path: "/mnt/data"
