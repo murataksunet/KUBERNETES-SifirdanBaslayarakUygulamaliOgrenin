@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-rs-demo
+    matchExpressions:
+      - {key: tier, operator: In, values: [frontend]}
+  template:
+    metadata:
+      name: web-rs-pod
+      labels:
+        app: web-rs-demo
+        tier: frontend
+    spec:
+      containers:
+      - name: web-rs-container
+        image: murataksunet/k8s-replicaset
+        ports:
+        - containerPort: 80
