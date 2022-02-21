@@ -14,13 +14,3 @@
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
 
- linux
-🎮 Games
-🤜 Group
-👩‍💻 IDE
-🔌 IDE Plugin
-👩‍💻 Languages
-🧐 Linters
-📱 Mobile Frameworks
-👨‍💻 Office
-⚙️ ORM
