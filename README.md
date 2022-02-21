@@ -12,4 +12,4 @@
 </html>
 Çok Değerli, Pek Kıymetli Arkadaşlarım Kubernetes:Sıfırdan Başlarak Öğrenin Eğitimime Hepiniz Hoşgeldiniz 
 
-Eğitim hazırlıkları tüm hızıyla devam etmektedir. Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
+Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
