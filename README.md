@@ -2,7 +2,7 @@
 
 <html>
 <body>
-
+Hi there 👋 I'm Thomas George Thomas,
 <p>
 <img src="https://kubernetes.io/images/kubernetes-horizontal-color.png">
 </a>
