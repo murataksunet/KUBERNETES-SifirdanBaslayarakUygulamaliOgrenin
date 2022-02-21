@@ -14,3 +14,4 @@
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
 
+	👋 :wave:
