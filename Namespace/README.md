@@ -51,3 +51,13 @@ kubectl get pods --namespace=developer
 ```
 # kubectl exec -it proje --namespace=developer -- /bin/bash
 ```
+***
+#### Namespace altındaki POD u silme
+```
+# kubectl delete pod nginx -n developer
+```
+***
+#### Namespace silme
+```
+# kubectl delete ns developer
+```
