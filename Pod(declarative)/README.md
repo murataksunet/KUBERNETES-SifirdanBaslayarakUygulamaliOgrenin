@@ -1,7 +1,7 @@
 
 ### 📗📗Bu bölümde Declerative yöntemde YAML dosya detaylarını ve komut kullanım şekillerini bulacaksınız📗📗
 
-#Template YAML dosyası 
+## Template YAML dosyası 
 ***
 ```
 apiVersion:
