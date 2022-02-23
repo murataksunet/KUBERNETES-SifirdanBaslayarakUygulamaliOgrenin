@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-hello-screenfetch
+spec:
+  containers:
+  - name: c1
+    image: docker.io/murataksunet/k8s-hellothere
+    command:
+    args:
+    - screenfetch 
+    - "-E"
