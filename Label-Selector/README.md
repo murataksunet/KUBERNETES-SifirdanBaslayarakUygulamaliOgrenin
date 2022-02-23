@@ -44,13 +44,28 @@ kubectl get po --show-labels
 ```
 kubectl describe pod tomcat-labelpod-1
 ```
-#### Podlara atanan labelları listeleme
+#### Selector kullanarak Label üzerinden POD listeleme 
 ***
 ```
-kubectl get po --show-labels
+kubectl get po -l app.kubernetes.io/version="8.0" -o wide
 ```
 ***
-#### Pod üzerinde bulunan labelları görüntüleme
+#### Selector kullanarak Label üzerinden POD detaylarını görüntüleme 
 ```
 kubectl describe pod tomcat-labelpod-1
+```
+***
+#### Selector kullanarak Label üzerinden POD Silme
+```
+kubectl delete po -l app.kubernetes.io/name=tomcat
+```
+***
+#### Node üzerinde ki Label bilgisini silme
+```
+kubectl label node minikube kubernetes.io/say-
+```
+***
+#### Node üzerindeki label bilgisini silme
+```
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version-
 ```
