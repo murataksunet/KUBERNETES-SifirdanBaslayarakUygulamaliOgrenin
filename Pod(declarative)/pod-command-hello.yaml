@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-command-hello
+spec:
+  containers:
+  - name: c1
+    image: ubuntu
+    command:
+    - /bin/bash
+    - -ec
+    - while :; do echo 'HELLOOO WORLD'; sleep 3; done
