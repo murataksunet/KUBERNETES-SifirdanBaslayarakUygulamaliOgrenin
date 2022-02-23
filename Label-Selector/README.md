@@ -24,28 +24,33 @@ kubectl label pods web-nginx tier=frontend
 ```
 kubectl label nodes node1 disktype=ssd
 ```
-
-
-
-
-
-#### Pod içerisindeki container1 bash üzerine bağlanma
+***
+#### Pod'a Label Atama
+```
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
+```
+***
+#### Label olan Pod üzerinde değişiklik yapma
+```
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" --overwrite
+```
+#### Podlara atanan labelları listeleme
 ***
 ```
 kubectl get po --show-labels
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Pod üzerinde bulunan labelları görüntüleme
 ```
 kubectl describe pod tomcat-labelpod-1
 ```
+#### Podlara atanan labelları listeleme
 ***
-#### Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
+kubectl get po --show-labels
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Pod üzerinde bulunan labelları görüntüleme
 ```
-kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" --overwrite
+kubectl describe pod tomcat-labelpod-1
 ```
