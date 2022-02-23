@@ -8,9 +8,16 @@
 kubectl label nodes minikube-m03 dedicated=devops
 ```
 ***
-#### Node üzerinde taint bilgisi atama
+#### Node üzerine taint bilgisi atama
 ```
 kubectl taint nodes minikube-m03 cpu_speed=fast:NoSchedule
+```
+***
+#### Node üzerine taint bilgisi atama ve effect türleri
+```
+kubectl taint nodes node1 key1=value1:NoSchedule
+kubectl taint nodes node1 key1=value1:PreferNoSchedule
+kubectl taint nodes node1 key1=value1:NoExecute
 ```
 ***
 #### Node üzerinde label ve taint bilgilerini görüntüle
