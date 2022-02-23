@@ -91,9 +91,14 @@ kubectl get pods -A --sort-by=.metadata.name
 kubectl apply (-f FILENAME | -k DIRECTORY) [options]
 ```
 ***
-#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+#### field-selector komutunu kullanarak nesne listeleme
 ```
-
+# kubectl get pods --field-selector metadata.name=myApp
+# kubectl get pods --field-selector metadata.namespace=production
+# kubectl get pods --field-selector metadata.namespace!=Project
+# kubectl get services  --all-namespaces --field-selector metadata.namespace!=default
+# kubectl get pods --field-selector status.phase=Running
+# kubectl get pods --field-selector=status.phase!=Running,spec.restartPolicy=Always
 ```
 ***
 #### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
@@ -101,7 +106,3 @@ kubectl apply (-f FILENAME | -k DIRECTORY) [options]
 
 ```
 ***
-#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
-```
-
-```
