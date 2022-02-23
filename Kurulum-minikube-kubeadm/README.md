@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Minikube-Kubeadm Detaylarını bulacaksınız📗
 
-#### Minikube komutları detayları
+#### Minikube komut detayları
 ***
 ```
 # minikube status // minikube durum bilgisini görüntüleyin
