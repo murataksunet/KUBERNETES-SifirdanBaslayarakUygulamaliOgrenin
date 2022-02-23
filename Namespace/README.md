@@ -2,7 +2,28 @@
 
 ### 📗Bu bölümde YAML dosyası üzerinden Namespace Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+***
+#### YAML dosyası üzerinden namespace oluşturma
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: developer
+```
+***
+#### Komut satırı üzerinden namespace oluşturma
+```
+# kubectl create namespace developer
+```
+#### Sistem üzerinde tanımlı namespaceleri listele
+```
+# kubectl get namespace
+```
+#### Namespace detaylarını görüntüleme
+```
+# kubectl describe namespace developer
+```
+#### Kubernetes üzerinde dahili gelen namespaceler
 ***
 ```
 default
@@ -11,35 +32,22 @@ kube-public
 Kube-node-lease
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Tanımlı namespace üzerinde POD oluşturma
 ```
-# kubectl create namespace dev
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: dev
+kubectl run nginx --image=nginx --namespace=developer
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Namespace altındaki podları listeleme
 ```
-kubectl run nginx --image=nginx --namespace=<insert-namespace-name-here>
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl get pods --namespace=<insert-namespace-name-here>
+kubectl get pods --namespace=developer
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### YAML dosyasındaki nesneleri Namespace altında oluşturma
 ```
-# kubectl create -f  proje.yaml --namespace=dev
+# kubectl create -f  proje.yaml --namespace=developer
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Namespace altındaki POD içerisine bağlanma
 ```
-# kubectl exec -it proje --namespace=dev -- /bin/bash
+# kubectl exec -it proje --namespace=developer -- /bin/bash
 ```
