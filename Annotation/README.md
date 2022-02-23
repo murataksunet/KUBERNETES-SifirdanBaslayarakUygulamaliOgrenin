@@ -22,27 +22,27 @@ metadata:
     kbarticle: "https://kb.docs.example.com/KB123456"
 ```
 ***
-#### Komut satırından Pod üzerine annotate ekleme 
+#### Komut satırından Pod üzerine Annotation ekleme 
 ```
 kubectl annotate pod mysql email="admin@murataksu.net"
 ```
 ***
-#### annotate bilgisi güncelleme
+#### Annotation bilgisi güncelleme
 ```
 kubectl annotate pod mysql version="2" --overwrite
 ```
 ***
-#### annotate kaldırma
+#### Annotation kaldırma
 ```
 kubectl annotate pod mysql kbarticle-
 ```
 ***
-#### Service üzerine annotate ekleme
+#### Service üzerine Annotation ekleme
 ```
 kubectl annotate service quote a8r.io/owner=”@sally”
 ```
 ***
-#### annotate bilgisi görüntüleme
+#### Annotation bilgisi görüntüleme
 ```
 kubectl describe pod mysql
 ```
