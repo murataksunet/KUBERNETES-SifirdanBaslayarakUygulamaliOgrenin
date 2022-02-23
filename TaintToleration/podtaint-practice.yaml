@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: podtaint
+spec:
+  containers:
+  - name: c1
+    image: redis
+  nodeSelector:
+    dedicated: devops
+  tolerations:
+  - key: "cpu_speed"
+    operator: "Equal"
+    value: "fast"
+    effect: "NoSchedule"
