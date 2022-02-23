@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Pod içerisinde main container ayağa kalkmadan önce diğer containerın çalışması 
 ***
 ```
 Name:          myapp-pod
