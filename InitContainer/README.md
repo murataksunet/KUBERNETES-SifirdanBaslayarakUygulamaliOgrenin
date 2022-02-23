@@ -31,22 +31,12 @@ Containers:
 [...]
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Pod içerisindeki init-mydb loglarının listelenmesi
 ```
-kubectl exec my-pod -c my-container -- ls / 
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl logs my-pod -c my-container 
+kubectl logs --container=init-mydb initpod
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Pod nesnesinin silinmesi
 ```
-kubectl logs -l name=myLabel -c my-container 
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
+kubectl delete -f initcontainer.yaml
 ```
