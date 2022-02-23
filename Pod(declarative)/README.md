@@ -56,6 +56,38 @@ kubectl create -f ./my-manifest.yaml         ### YAML dosyasındaki nesneleri ol
 ***
 #### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
 ```
+kubectl run firstyaml --image=httpd --dry-run=client -o yaml > thirdyaml.yaml
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+kubectl run mypod --image=alpine:3.9 --restart=Never --dry-run=client --command -o yaml -- sleep 3600 > command-sleep-2.yaml
+kubectl run command-arg --image=busybox --restart=Never --dry-run=client -o yaml --command -- printenv HOSTNAME KUBERNETES_PORT > command-arg-3.yaml
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+kubectl get pod mypod -o 'jsonpath={.spec.containers[*].name}'
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+kubectl get pod mypod -o custom-columns=CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image
+kubectl get pod -A -o custom-columns=CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+kubectl get pods -A --sort-by=.metadata.name
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
 
 ```
 ***
