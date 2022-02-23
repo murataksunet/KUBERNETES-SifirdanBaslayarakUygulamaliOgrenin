@@ -1,29 +1,38 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Taint Toleration
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Taint Toleration Yönetim işlemlerini bulacaksınız📗
 
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl label nodes minikube-m03 dedicated=devops
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
-kubectl exec my-pod -c my-container -- ls / 
+kubectl taint nodes minikube-m03 cpu_speed=fast:NoSchedule
 ```
 ***
 #### Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs my-pod -c my-container 
+kubectl describe nodes minikube-m03
 ```
 ***
 #### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs -l name=myLabel -c my-container 
+kubectl taint nodes minikube-m03 cpu_speed-
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+  - key: "hardware"
+    operator: "Equal"
+    value: "special"
+    effect: "NoSchedule"
+```
+***
+#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+```
+  tolerations:
+  - operator: "Exists"
 ```
