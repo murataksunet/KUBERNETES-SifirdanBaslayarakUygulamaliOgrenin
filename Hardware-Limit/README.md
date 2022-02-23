@@ -1,42 +1,25 @@
-## 🧑 Ders: Init-Container
+## 🧑 Ders: Hardware-Limit
 
-### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisinde main container ayağa kalkmadan önce diğer containerın çalışması 
+#### YAML dosyası hardware limit detayları
 ***
 ```
-Name:          myapp-pod
-Namespace:     default
-[...]
-Labels:        app=myapp
-Status:        Pending
-[...]
-Init Containers:
-  init-myservice:
-[...]
-    State:         Running
-[...]
-  init-mydb:
-[...]
-    State:         Waiting
-      Reason:      PodInitializing
-    Ready:         False
-[...]
-Containers:
-  myapp-container:
-[...]
-    State:         Waiting
-      Reason:      PodInitializing
-    Ready:         False
-[...]
+    resources:
+      requests:           ## Node üzerinde olması istenilen hardware limit
+        cpu: 100m
+        memory: 128Mi
+      limits:             ## Hardware'in kullanabileceği üst limit
+        cpu: 250m
+        memory: 256Mi
 ```
 ***
-#### Pod içerisindeki init-mydb loglarının listelenmesi
+#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
 ```
-kubectl logs --container=init-mydb initpod
+kubectl top pod cpuramlimit-pod 
 ```
 ***
-#### Pod nesnesinin silinmesi
+#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
 ```
-kubectl delete -f initcontainer.yaml
+kubectl top pods -A
 ```
