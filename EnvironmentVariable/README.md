@@ -28,32 +28,26 @@ KUBE_DNS_SERVICE_HOST = 10.147.240.10
 KUBE_DNS_SERVICE_PORT = 53
 ```
 ***
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### Pod Oluştururken ENV bilgisi ekleme
 ```
-kubectl top pod cpuramlimit-pod 
-```
-***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
-```
-kubectl top pods -A
+kubectl run nginx-env --image=nginx --restart=Always --env=KUBERNETES_SERVICE_PORT="443"
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Çalışan POD üzerindeki ENV bilgilerini görüntüleme
 ```
-kubectl top pods -A
-```
-***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
-```
-kubectl top pods -A
+kubectl exec nginx-env -- printenv
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### YAML üzerinden ENV gilgisi ekleme
 ```
-kubectl top pods -A
+    env:
+    - name: PMA_HOST
+      value: mysql
+    - name: PMA_PORT
+      value: "3306"
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Pod detaylarında ENV bilgilerini görüntüleme
 ```
-kubectl top pods -A
+kubectl describe pod nginx-env 
 ```
