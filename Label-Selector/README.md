@@ -1,26 +1,26 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Label-Selector
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Label-Selector kullanarak Pod Yönetim işlemlerini bulacaksınız📗
 
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl get po --show-labels
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
-kubectl exec my-pod -c my-container -- ls / 
+kubectl describe pod tomcat-labelpod-1
 ```
 ***
 #### Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs my-pod -c my-container 
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
 ```
 ***
 #### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs -l name=myLabel -c my-container 
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" --overwrite
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
