@@ -1,6 +1,6 @@
 
 ***
-Imperative yöntemle pod oluşturma.
+Bir pod objesinin loglarını görüntüleme. 
 
 ```
 apiVersion:
@@ -8,12 +8,18 @@ kind:
 metadata:
 spec:
 ```
+***
+Bir pod objesinin loglarını görüntüleme. 
+```
 Pod ismini firstyaml olarak verin
 apiVersion: v1
 kind: Pod
 metadata:
   name: firstyaml
 spec:
+```
+***
+Bir pod objesinin loglarını görüntüleme. 
 ```
 apiVersion: v1
 kind: Pod
@@ -25,7 +31,7 @@ spec:
     image: httpd
 ```
 ***
-Bir pod objesinin loglarını görüntüleme. _(-f opsiyonu çıktıya yapışmanızı ve anlık olarak üretilen logları görmenizi sağlar)_
+Bir pod objesinin loglarını görüntüleme. 
 ```
 apiVersion: v1
 kind: Pod
