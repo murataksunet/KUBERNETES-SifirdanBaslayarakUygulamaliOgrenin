@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-affinity-2
+spec:
+  containers:
+  - name: affinity-c1
+    image: nginx
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 10
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/e2e-az-ankara
+            operator: In
+            values:
+            - a2a-hy1
+      - weight: 9
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/e2e-az-istanbul
+            operator: In
+            values:
+            - e2e-az1
