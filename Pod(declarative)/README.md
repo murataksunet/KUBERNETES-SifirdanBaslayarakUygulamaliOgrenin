@@ -48,10 +48,10 @@ spec:
 #### YAML dosyası çalıştırma
 ```
 kubectl apply -f ./my-manifest.yaml          ### YAML dosyasındaki nesneleri oluştur
-kubectl apply -f ./my1.yaml -f ./my2.yaml
-kubectl apply -f ./dir
-kubectl apply -f https://git.io/vPieo
-kubectl create -f ./my-manifest.yaml
+kubectl apply -f ./my1.yaml -f ./my2.yaml    ### Birden fazla YAML dosyasındaki nesneleri oluştur
+kubectl apply -f ./dir                       ### Dizindeki YAML dosyalarındaki nesneleri oluştur
+kubectl apply -f https://git.io/vPieo        ### URL üzerinde ki YAML dosyasındaki nesneleri oluştur
+kubectl create -f ./my-manifest.yaml         ### YAML dosyasındaki nesneleri oluştur. YAML dosyası güncellemesinde uyarı verir
 ```
 ***
 #### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
