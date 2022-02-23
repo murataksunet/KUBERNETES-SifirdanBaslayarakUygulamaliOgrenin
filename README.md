@@ -19,3 +19,6 @@ Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu 
 
 YAML File Kullanımı
 https://github.com/murataksunet/KUBERNETES-SifirdanBaslayarakUygulamaliOgrenin/blob/main/Pod/pod-yaml-template.yaml
+
+https://github.com/murataksunet/KUBERNETES-SifirdanBaslayarakUygulamaliOgrenin/blob/main/Pod/pod.yaml
+
