@@ -25,13 +25,3 @@
 # minikube version  // minikube version bilgisi kontrol edin
 # minikube update-check  //  minikube kubernetes güncel versiyon sorgulaması yapın
 ```
-***
-#### Pod içerisindeki my-container root dizini listeleme
-```
-kubectl exec my-pod -c my-container -- ls / 
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl logs my-pod -c my-container 
-```
