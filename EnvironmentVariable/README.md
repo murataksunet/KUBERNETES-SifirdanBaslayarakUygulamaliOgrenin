@@ -6,7 +6,7 @@
 #### Nedir ?
 ***
 ```
-Envieronment Variable,Kubernetes üzerinde POD içerisinde ortam değişkenleri tanımlamak için kullanılmaktadır
+Envieronment Variable, POD içerisinde ortam değişkenleri tanımlamak için kullanılmaktadır
 ```
 ***
 #### YAML Hardware detayları
