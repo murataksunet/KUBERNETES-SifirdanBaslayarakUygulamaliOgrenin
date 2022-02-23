@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Minikube-Kubeadm Detaylarını bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Minikube komutları detayları
 ***
 ```
 # minikube status // minikube durum bilgisini görüntüleyin
