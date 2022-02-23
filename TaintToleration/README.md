@@ -2,37 +2,40 @@
 
 ### 📗Bu bölümde Taint Toleration Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Node üzerine Label bilgisi atama
 ***
 ```
 kubectl label nodes minikube-m03 dedicated=devops
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Node üzerinde taint bilgisi atama
 ```
 kubectl taint nodes minikube-m03 cpu_speed=fast:NoSchedule
 ```
 ***
-#### Pod içerisindeki my-container loglarını listeleme
+#### Node üzerinde label ve taint bilgilerini görüntüle
 ```
 kubectl describe nodes minikube-m03
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Node üzerindeki taint bilgisini çıkarma
 ```
 kubectl taint nodes minikube-m03 cpu_speed-
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD üzerine tolerations bilgisi ekleme - hardware=special olmalı
 ```
-  - key: "hardware"
-    operator: "Equal"
-    value: "special"
-    effect: "NoSchedule"
+tolerations:
+- key: "hardware"
+  operator: "Equal"
+  value: "special"
+  effect: "NoSchedule"
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### POD üzerine tolerations bilgisi ekleme - memorysize key bilgisi olması yeterli
 ```
-  tolerations:
-  - operator: "Exists"
+tolerations:
+- key: "memorysize"
+  operator: "Exists"
+  effect: "NoSchedule"
 ```
