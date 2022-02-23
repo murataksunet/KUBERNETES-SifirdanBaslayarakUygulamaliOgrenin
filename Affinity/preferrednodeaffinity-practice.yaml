@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeaffinity
+spec:
+  containers:
+  - name: nodeaffinity
+    image: nginx
+  affinity:
+    nodeAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 5
+        preference:
+          matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - fast
+      - weight: 4
+        preference:
+          matchExpressions:
+          - key: hardware
+            operator: In
+            values:
+            - high
