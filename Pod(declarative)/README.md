@@ -1,5 +1,5 @@
 
-### Bu bölümde Declerative yöntemde YAML dosya detaylarını ve komut kullanım şekillerini bulacaksınız
+### 📗📗Bu bölümde Declerative yöntemde YAML dosya detaylarını ve komut kullanım şekillerini bulacaksınız📗📗
 
 Bir pod objesinin loglarını görüntüleme. 
 ***
