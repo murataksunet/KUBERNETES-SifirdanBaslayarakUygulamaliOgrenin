@@ -5,10 +5,7 @@
 #### Template YAML dosyası 
 ***
 ```
-apiVersion:
-kind:
-metadata:
-spec:
+kubectl exec -it multipod -c container1 -- ls
 ```
 ***
 #### Pod Nesnesi Oluşturma ve Pod'a firstyaml ismi verme
