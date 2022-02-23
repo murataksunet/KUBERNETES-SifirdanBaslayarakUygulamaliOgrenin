@@ -101,8 +101,8 @@ kubectl apply (-f FILENAME | -k DIRECTORY) [options]
 # kubectl get pods --field-selector=status.phase!=Running,spec.restartPolicy=Always
 ```
 ***
-#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+#### Pod nesnesinin YAML file üzerinden silinmesi
 ```
-
+kubectl delete -f ./my-manifest.yaml 
 ```
 ***
