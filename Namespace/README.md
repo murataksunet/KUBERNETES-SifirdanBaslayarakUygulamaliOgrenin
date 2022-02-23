@@ -16,6 +16,14 @@ Kube-node-lease
 # kubectl create namespace dev
 ```
 ***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+```
+***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
 kubectl run nginx --image=nginx --namespace=<insert-namespace-name-here>
@@ -28,5 +36,10 @@ kubectl get pods --namespace=<insert-namespace-name-here>
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+# kubectl create -f  proje.yaml --namespace=dev
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+# kubectl exec -it proje --namespace=dev -- /bin/bash
 ```
