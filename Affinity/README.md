@@ -2,28 +2,24 @@
 
 ### 📗Bu bölümde Affinity Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Node üzerine label atama
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl label node minikube-m03 disktype=ssd
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Nodelar üzerinde bulunan labelları listeleme
 ```
-kubectl exec my-pod -c my-container -- ls / 
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl logs my-pod -c my-container 
+kubectl get node minikube-m03 --show-labels
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### YAML dosyasında , podun talep edilen node üzerinde oluşturulması için, label bilgisinin yazılması
 ```
-kubectl logs -l name=myLabel -c my-container 
+  nodeSelector:
+    disktype: ssd
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD'un talep edilen node üzerinde oluşturulduğunun kontrolü
 ```
-kubectl port-forward multipod 8080:80
+kubectl get pods -o wide
 ```
