@@ -47,7 +47,10 @@ spec:
 ***
 #### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
 ```
-
+kubectl apply -f ./my-manifest.yaml
+kubectl apply -f ./my1.yaml -f ./my2.yaml
+kubectl apply -f ./dir
+kubectl apply -f https://git.io/vPieo
 ```
 ***
 #### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
