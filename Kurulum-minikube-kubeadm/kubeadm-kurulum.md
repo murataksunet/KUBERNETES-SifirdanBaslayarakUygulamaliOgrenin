@@ -1,22 +1,29 @@
-### 📗Bu bölümde Minikube Kurulum adımlarını bulacaksınız📗
+### 📗Bu bölümde Kubeadm Kurulum adımlarını bulacaksınız📗
 
-#### Kurulum Sayfası
+#### 3 VM - master(1) ve worker(2) nodes Olacak Şekilde Kurulum Yapıyoruz
 ***
 ```
-https://minikube.sigs.k8s.io/docs/start/
+Donanım İhtiyacı
+
+Master: 1 vCPUs - 4GB Ram
+Worker: 2 vCPUs - 3GB RAM OS: CentOS/RHEL 7
 ```
 ***
-#### Hypervisor Kur(Orn.Virtualbox)
+#### Hostname değişikliği yap. Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
 ```
-https://www.virtualbox.org/wiki/Downloads
-```
-***
-#### Minikube Kurulum Exe(Windows)
-```
-https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
+Master Node Üzerinde hostnamectl set-hostname master-node
+Worker Node 1 Üzerinde hostnamectl set-hostname worker-node-1
+Worker Node 2 Üzerinde hostnamectl set-hostname worker-node-2
 ```
 ***
-#### minikube cluster kur
+#### Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
+```
+2. IP Adreslerini IP bloğunuza  göre düzenleyin
+Tüm Nodelar Üzerinde
+cat <> /etc/hosts 192.168.100.120 master-node 192.168.100.121 worker-node-1 192.168.100.122 worker-node-2 EOF
+```
+***
+### NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde  çalıştırılacaktır
 ```
 minikube start
 ```
