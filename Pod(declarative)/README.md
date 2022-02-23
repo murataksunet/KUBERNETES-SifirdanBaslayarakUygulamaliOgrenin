@@ -44,3 +44,28 @@ spec:
     ports:
     - containerPort: 80
 ```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
+***
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve 80 Portunu Açma
+```
+
+```
