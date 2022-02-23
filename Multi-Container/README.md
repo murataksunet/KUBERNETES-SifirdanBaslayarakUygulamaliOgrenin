@@ -22,3 +22,8 @@ kubectl logs my-pod -c my-container
 ```
 kubectl logs -l name=myLabel -c my-container 
 ```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
