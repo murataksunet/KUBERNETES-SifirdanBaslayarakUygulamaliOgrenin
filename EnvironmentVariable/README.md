@@ -38,7 +38,7 @@ kubectl run nginx-env --image=nginx --restart=Always --env=KUBERNETES_SERVICE_PO
 kubectl exec nginx-env -- printenv
 ```
 ***
-#### YAML üzerinden ENV gilgisi ekleme
+#### YAML üzerinden ENV bilgisi ekleme
 ```
     env:
     - name: PMA_HOST
