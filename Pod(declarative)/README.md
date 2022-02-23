@@ -1,7 +1,8 @@
 
-***
-Bir pod objesinin loglarını görüntüleme. 
+### Bu bölümde Declerative yöntemde YAML dosya detaylarını ve komut kullanım şekillerini bulacaksınız
 
+Bir pod objesinin loglarını görüntüleme. 
+***
 ```
 apiVersion:
 kind:
