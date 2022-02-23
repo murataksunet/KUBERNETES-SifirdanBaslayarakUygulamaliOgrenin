@@ -12,9 +12,9 @@ OS: CentOS/RHEL 7
 ***
 #### Hostname değişikliği yap. Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
 ```
-Master Node Üzerinde hostnamectl set-hostname master-node
-Worker Node 1 Üzerinde hostnamectl set-hostname worker-node-1
-Worker Node 2 Üzerinde hostnamectl set-hostname worker-node-2
+#set-hostname master-node //Master Node Üzerinde hostnamectl 
+#set-hostname worker-node-1 //Worker Node 1 Üzerinde hostnamectl 
+#set-hostname worker-node-2 //Worker Node 2 Üzerinde hostnamectl 
 ```
 ***
 #### /etc/hosts içerisine node ip bilgileirni ekleyin
