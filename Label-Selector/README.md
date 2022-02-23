@@ -60,12 +60,12 @@ kubectl describe pod tomcat-labelpod-1
 kubectl delete po -l app.kubernetes.io/name=tomcat
 ```
 ***
-#### Node üzerinde ki Label bilgisini silme
+#### Node üzerinde ki Label bilgisini kaldırma
 ```
 kubectl label node minikube kubernetes.io/say-
 ```
 ***
-#### Node üzerindeki label bilgisini silme
+#### Node üzerindeki label bilgisini kaldırma
 ```
 kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version-
 ```
