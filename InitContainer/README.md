@@ -1,6 +1,6 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Init-Container
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
 
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
