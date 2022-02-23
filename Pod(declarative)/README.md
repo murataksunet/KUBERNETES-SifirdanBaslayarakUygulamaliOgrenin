@@ -1,5 +1,5 @@
 
-## 📗📗Bu bölümde Declerative yöntemde YAML dosya detaylarını ve komut kullanımı bulacaksınız📗📗
+## 📗📗Bu bölümde Declerative yöntemde YAML file detaylarını ve komut kullanımı bulacaksınız📗📗
 
 #### Template YAML dosyası 
 ***
