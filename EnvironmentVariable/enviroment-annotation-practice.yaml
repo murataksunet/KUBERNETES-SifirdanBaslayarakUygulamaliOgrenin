@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+  labels:
+    db: mysql
+  annotations:
+    owner: "Murat AKSU"
+    releasedate: "01.01.2023"
+    version: "1.1.0"
+    imageregistry: "https://hub.docker.com"
+    kbarticle: "https://kb.docs.example.com/KB123456"
+spec:
+  containers:
+  - name: mysql-container
+    image: mysql:5.6
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: onetwothree!!
+    ports:
+    - containerPort: 3306
+  - name: phpmyadmin
+    image: phpmyadmin/phpmyadmin
+    env:
+    - name: PMA_HOST
+      value: mysql
+    - name: PMA_PORT
+      value: "3306"
+    ports:
+    - containerPort: 80
