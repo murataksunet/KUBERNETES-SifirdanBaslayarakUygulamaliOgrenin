@@ -16,7 +16,7 @@ Worker Node 1 Üzerinde hostnamectl set-hostname worker-node-1
 Worker Node 2 Üzerinde hostnamectl set-hostname worker-node-2
 ```
 ***
-#### Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
+#### /etc/hosts içerisine node ip bilgileirni ekleyin
 ```
 2. IP Adreslerini IP bloğunuza  göre düzenleyin
 Tüm Nodelar Üzerinde
@@ -24,16 +24,67 @@ cat <> /etc/hosts 192.168.100.120 master-node 192.168.100.121 worker-node-1 192.
 ```
 ***
 ### NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde  çalıştırılacaktır
+***
+####  Firewall | Swap | SELinux Kapatma
 ```
-minikube start
+SELinux Pasif Et
+setenforce 0 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
+#Sistem Yeniden Başlatılacak reboot
+Swap Pasif Et
+swapoff -a sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
+NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
 ```
 ***
-#### Nodeları listele
+#### Kubernetes Repository tanımla
 ```
-kubectl get nodes
+cat < /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg exclude=kube* EOF
 ```
 ***
-#### Minikube web arayüzünü aç
+#### Sistem güncelleme ve Docker | Kubelet | Kubeadm | Kubectl Kurulum
 ```
-minikube dashboard
+yum update -y yum install -y docker kubeadm kubelet kubectl --disableexcludes=kubernetes
+```
+***
+#### Docker ve Kubectl aktif etme ve başlatma
+```
+systemctl enable docker && systemctl start docker systemctl enable kubelet && systemctl start kubelet
+```
+***
+### Aşağıdaki adımlar sadece master node üzerinde yapılacak
+***
+#### Kubernetes "master" node yapılandırma
+```
+kubeadm init
+```
+***
+#### kubectl standart user konfigurasyonu
+```
+mkdir -p $HOME/.kube sudo cp -i /etc/kubernetes/admin.conf
+$HOME/.kube/config sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+***
+### Aşağıdaki adımlar sadece worke nodelar üzerinde yapılacak
+***
+#### "worker" nodeların kubernetes clustera eklenemesi. Sizde ki üretilen çıktıya göre ekleme işlemi yapılacak
+####  Master Node yapılandırması tamamlandıktan sonra üretilen komut worker nodelar üzerinde çalıştırılacaktır
+```
+kubeadm join 192.168.100.120:6443 --token tv17b1.dlsj9vbl8pc42pr1
+--discovery-token-ca-cert-hash sha256:1a58dc3bb7904e3d3508498cf26a0064b2b1180e6629c473375deebff251eebf
+```
+***
+### Aşağıdaki adımlar Master node üzerinde çalıştırılacaktır
+***
+#### Pod Network Yapılandırma
+```
+export kubever=$(kubectl version | base64 | tr -d '\n') kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$kubever"
+```
+***
+#### Test Nodeları Görüntüle
+```
+kubectl version --short
+```
+***
+#### Oluşturulan Pod'u Görüntüleme
+```
+kubectl get po -o wide
 ```
