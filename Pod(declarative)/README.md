@@ -10,7 +10,7 @@ metadata:
 spec:
 ```
 ***
-Pod Nesnesi Oluşturma ve Pod'a firstyaml ismi verme
+#### Pod Nesnesi Oluşturma ve Pod'a firstyaml ismi verme
 ```
 Pod ismini firstyaml olarak verin
 apiVersion: v1
@@ -20,7 +20,7 @@ metadata:
 spec:
 ```
 ***
-Apache Image'ini Kullanan Pod Nesnesi Oluşturma
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma
 ```
 apiVersion: v1
 kind: Pod
@@ -32,7 +32,7 @@ spec:
     image: httpd
 ```
 ***
-Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve Podun 80 Portunu Açma
+#### Apache Image'ini Kullanan Pod Nesnesi Oluşturma ve Podun 80 Portunu Açma
 ```
 apiVersion: v1
 kind: Pod
