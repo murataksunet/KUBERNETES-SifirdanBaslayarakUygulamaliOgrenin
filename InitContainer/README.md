@@ -5,7 +5,30 @@
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+Name:          myapp-pod
+Namespace:     default
+[...]
+Labels:        app=myapp
+Status:        Pending
+[...]
+Init Containers:
+  init-myservice:
+[...]
+    State:         Running
+[...]
+  init-mydb:
+[...]
+    State:         Waiting
+      Reason:      PodInitializing
+    Ready:         False
+[...]
+Containers:
+  myapp-container:
+[...]
+    State:         Waiting
+      Reason:      PodInitializing
+    Ready:         False
+[...]
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
