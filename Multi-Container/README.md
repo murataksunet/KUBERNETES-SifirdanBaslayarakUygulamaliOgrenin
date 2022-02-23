@@ -1,6 +1,6 @@
-## 🧑 Ders: Declarative Yöntemle Kubernetes Nesne Yönetimi
+## 🧑 Ders: Multi-Container
 
-### 📗Bu bölümde Declerative yöntemde basit YAML detaylarını ve komut kullanımı bulacaksınız📗
+### 📗Bu bölümde Multi-Container'a Sahip Pod Yönetimi bulacaksınız📗
 
 #### Template YAML dosyası 
 ***
