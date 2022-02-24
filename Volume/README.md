@@ -1,29 +1,34 @@
 ## 🧑 Ders: Volume
 
-### 📗Bu bölümde emptyDir ve HostPath Yönetim işlemleri Hakkında Bilgi bulacaksınız📗
+### 📗Bu bölümde emptyDir ve HostPath yönetimi hakkında bilgi bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Pod içerisine emptyDir volume bağlama
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+  volumes:
+  - name: cache-volume
+    emptyDir: {}
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Pod içerisine hostPath volume bağlama
 ```
-kubectl exec my-pod -c my-container -- ls / 
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl logs my-pod -c my-container 
+  volumes:
+  - name: data-volume
+    hostPath:
+      path: /tmp/storage
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Pod'a bağlanan volume container içerisine mount etme
 ```
-kubectl logs -l name=myLabel -c my-container 
+      volumeMounts:
+        name: data-volume
+      - mountPath: /usr/share/nginx/html
+
+
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD içerisinde ki volume bilgisini görüntüleme
 ```
-kubectl port-forward multipod 8080:80
+kubectl describe pods volume-test
 ```
+
