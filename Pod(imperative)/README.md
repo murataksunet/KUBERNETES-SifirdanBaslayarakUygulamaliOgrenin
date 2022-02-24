@@ -5,26 +5,190 @@
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl version
+```
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+***
+```
+kubectl run k8s-pod-1 --image=hello-world
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
-kubectl exec my-pod -c my-container -- ls / 
+kubectl get pods
 ```
 ***
 #### Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs my-pod -c my-container 
+kubectl get deployment
 ```
 ***
 #### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs -l name=myLabel -c my-container 
+kubectl get all
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl describe deployment
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
 kubectl port-forward multipod 8080:80
 ```
-
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl port-forward multipod 8080:80
+```
