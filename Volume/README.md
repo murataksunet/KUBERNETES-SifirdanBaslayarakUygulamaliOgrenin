@@ -1,6 +1,6 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Volume
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde emptyDir ve HostPath Yönetim işlemleri Hakkında Bilgi bulacaksınız📗
 
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
