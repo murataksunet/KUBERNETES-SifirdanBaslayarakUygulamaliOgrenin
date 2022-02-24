@@ -35,160 +35,100 @@ kubectl describe deployment
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl logs k8s-pod-1
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl run k8s-pod-2 --image=docker.io/murataksunet/k8s-hellothere --restart=Never
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl delete pods k8s-pod-1
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl delete pods --all
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl delete deployment x.yml
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl exec -it k8s-web-1 -- /bin/bash
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl exec k8s-web-1 -- ls -l
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl cp password.txt k8s-cp-1:tmp/
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl cp default/k8s-cp-1:/tmp/store/
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl port-forward mypod 8080:80
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl get po --show-labels
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl run k8s-label-2 --image=nginx --labels="env=prod,tier=frontend"
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl get po k8s-label-1 --show-labels
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl label pods k8s-label-1 env=demo --overwrite
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl label pods --all status=healthy
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl get po --selector="env=prod"
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl get po -l "env!=prod,tier=backend"
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl get po -l "env in (prod),tier in (frontend)"
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl delete pods -l "env=demo"
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
-```
-***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
-```
-kubectl port-forward multipod 8080:80
+kubectl delete pods -l "env in (prod),tier in (backend)"
 ```
