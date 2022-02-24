@@ -1,20 +1,14 @@
-## 🧑 Ders: Hardware-Limit
+## 🧑 Ders: Persistent Volume
 
-### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Persistent Volume Yönetim işlemlerini bulacaksınız📗
 
-#### YAML dosyası hardware limit detayları
+#### Persistent Volume
 ***
 ```
-    resources:
-      requests:           ## Node üzerinde olması istenilen hardware limit
-        cpu: 100m
-        memory: 128Mi
-      limits:             ## Hardware'in kullanabileceği üst limit
-        cpu: 250m
-        memory: 256Mi
+Kubernetes Custer içerisinde herhangi bir node’a bağlı olmayan, kalıcı olarak veri depolamak için cluster’a bağladığımız komponente verilen isimdir
 ```
 ***
-#### YAML Hardware detayları
+#### Persistent Volume Clam
 ```
 spec.containers[].resources.limits.cpu
 spec.containers[].resources.limits.memory
@@ -24,12 +18,7 @@ spec.containers[].resources.requests.memory
 spec.containers[].resources.requests.hugepages-<size>
 ```
 ***
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### Storage Class
 ```
 kubectl top pod cpuramlimit-pod 
-```
-***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
-```
-kubectl top pods -A
 ```
