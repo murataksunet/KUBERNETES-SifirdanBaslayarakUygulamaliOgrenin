@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap
+data:
+  db_host: "db.domain.com"
+  database: "mydatabase"
+  ui.properties: |
+    color.good=purple
+    color.bad=yellow
+    allow.textmode=true
