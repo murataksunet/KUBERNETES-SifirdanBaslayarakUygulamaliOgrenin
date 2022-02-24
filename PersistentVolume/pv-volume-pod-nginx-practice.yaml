@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pervolume001
+  labels:
+    type: pv001
+spec:
+  capacity:
+    storage: 4Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  mountOptions:
+   - nfsvers=3
+  nfs:
+    server: 192.168.99.124
+    path: /nfs
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pervolume001-claim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 4Gi
+  volumeMode: Filesystem
+  storageClassName: ""
+  selector:
+    matchLabels:
+      type: pv001
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pervolume001-pod-nginx
+spec:
+  containers:
+    - name: pv-container
+      image: nginx
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - mountPath: "/usr/share/nginx/html"
+          name: persistent-storage
+  volumes:
+    - name: persistent-storage
+      persistentVolumeClaim:
+        claimName: pervolume001-claim
