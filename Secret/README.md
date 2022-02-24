@@ -1,35 +1,46 @@
-## 🧑 Ders: Hardware-Limit
+## 🧑 Ders: Secret
 
-### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Secret Detayları Hakkında Bilgiler Bulacaksınız📗
 
-#### YAML dosyası hardware limit detayları
+#### Boş Secret Nesnesi Oluşturma
 ***
 ```
-    resources:
-      requests:           ## Node üzerinde olması istenilen hardware limit
-        cpu: 100m
-        memory: 128Mi
-      limits:             ## Hardware'in kullanabileceği üst limit
-        cpu: 250m
-        memory: 256Mi
+kubectl create secret generic empty-secret
 ```
 ***
-#### YAML Hardware detayları
+#### Secret Nesnesi Oluşturma
 ```
-spec.containers[].resources.limits.cpu
-spec.containers[].resources.limits.memory
-spec.containers[].resources.limits.hugepages-<size>
-spec.containers[].resources.requests.cpu
-spec.containers[].resources.requests.memory
-spec.containers[].resources.requests.hugepages-<size>
+kubectl create secret generic app-passwd --from-literal=mypassword='onetwothree123!'
 ```
 ***
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### YAML File Üzerinden Secret Nesnesi Oluşturma
 ```
-kubectl top pod cpuramlimit-pod 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: MWYyZDFlMmU2N2Rm
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Secret Nesnesi Oluşturma
 ```
-kubectl top pods -A
+kubectl create secret generic db-user-pass --from-file=dbuname=./username.txt --from-file=dbupassword=./password.txt
+```
+***
+#### Secret Nesnesi Oluşturma
+```
+kubectl create secret generic db-user-pass --from-literal=username=devuser --from-literal=password='S!B\*d$zDsb='
+```
+***
+#### Secret Detaylarını Görüntüle
+```
+kubectl describe secrets/db-user-pass
+```
+***
+#### Secret Nesnesi Sil
+```
+kubectl delete secret db-user-pass
 ```
