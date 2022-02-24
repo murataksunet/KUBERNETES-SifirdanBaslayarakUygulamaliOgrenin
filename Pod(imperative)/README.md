@@ -1,134 +1,134 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Kubectl(imperative)
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Kubectl(imperative) Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Kubernetes versiyon bilgisi öğrenme
 ***
 ```
 kubectl version
 ```
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Bağımsız nginx POD oluşturma
 ***
 ```
-kubectl run k8s-pod-1 --image=hello-world
+kubectl run k8s-pod-1 --image=nginx
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Sistemde tanımlı POD'ları listeleme
 ```
 kubectl get pods
 ```
 ***
-#### Pod içerisindeki my-container loglarını listeleme
+#### Sistemde tanımlı Deployment'ları listeleme
 ```
 kubectl get deployment
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Sistemde tanımlı tüm nesneleri listeleme
 ```
 kubectl get all
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### myproject-dep nesnesinin detaylarını görüntüle
 ```
-kubectl describe deployment
+kubectl describe deployment myproject-dep
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Pod logları görüntüle
 ```
 kubectl logs k8s-pod-1
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Özel image kullanarak POD oluşturma
 ```
 kubectl run k8s-pod-2 --image=docker.io/murataksunet/k8s-hellothere --restart=Never
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD silme
 ```
 kubectl delete pods k8s-pod-1
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Default namespace de çalışan tüm podları silme
 ```
 kubectl delete pods --all
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### YAML config file üzerinden nesne silme
 ```
 kubectl delete deployment x.yml
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Çalışan POD içerisine giriş yapma
 ```
 kubectl exec -it k8s-web-1 -- /bin/bash
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Çalışan pod içerisine girmeden ana dizini listeleme
 ```
 kubectl exec k8s-web-1 -- ls -l
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Lokaldeki password.txt dosyasını POD içerisine kopyalama
 ```
 kubectl cp password.txt k8s-cp-1:tmp/
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD içerisindeki dizindeki dosyaları lokale kopyalama
 ```
 kubectl cp default/k8s-cp-1:/tmp/store/
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD üzerine port yönlendirme 
 ```
 kubectl port-forward mypod 8080:80
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Sistemdeki POD ları label'ları ile birlikte listele 
 ```
 kubectl get po --show-labels
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Label ataması yapılarak POD oluşturma  
 ```
 kubectl run k8s-label-2 --image=nginx --labels="env=prod,tier=frontend"
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Özel POD'a ait labelları listeleme
 ```
 kubectl get po k8s-label-1 --show-labels
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### POD üzerinde bulunan label bilgisini değiştirme
 ```
 kubectl label pods k8s-label-1 env=demo --overwrite
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Sistemde çalışan tüm POD lar üzerine toplu label ataması yapma 
 ```
 kubectl label pods --all status=healthy
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Selector kullanarak label üzerinden POD sorgulama
 ```
 kubectl get po --selector="env=prod"
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Selector kullanarak label üzerinden POD sorgulama
 ```
 kubectl get po -l "env!=prod,tier=backend"
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Selector kullanarak label üzerinden POD sorgulama
 ```
 kubectl get po -l "env in (prod),tier in (frontend)"
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Selector kullanarak label üzerinden POD sorgulama
 ```
 kubectl delete pods -l "env=demo"
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Selector kullanarak label üzerinden POD sorgulama
 ```
 kubectl delete pods -l "env in (prod),tier in (backend)"
 ```
