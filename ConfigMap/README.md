@@ -1,35 +1,45 @@
-## 🧑 Ders: Hardware-Limit
+## 🧑 Ders: ConfigMap
 
-### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde ConfigMap Nesne Yönetim işlemlerini bulacaksınız📗
 
 #### YAML dosyası hardware limit detayları
 ***
 ```
-    resources:
-      requests:           ## Node üzerinde olması istenilen hardware limit
-        cpu: 100m
-        memory: 128Mi
-      limits:             ## Hardware'in kullanabileceği üst limit
-        cpu: 250m
-        memory: 256Mi
+kubectl create configmap empty-config
 ```
 ***
 #### YAML Hardware detayları
 ```
-spec.containers[].resources.limits.cpu
-spec.containers[].resources.limits.memory
-spec.containers[].resources.limits.hugepages-<size>
-spec.containers[].resources.requests.cpu
-spec.containers[].resources.requests.memory
-spec.containers[].resources.requests.hugepages-<size>
+kubectl create configmap special-config --from-literal=special.how=very
 ```
 ***
 #### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
 ```
-kubectl top pod cpuramlimit-pod 
+kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 ```
 ***
 #### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
 ```
-kubectl top pods -A
+kubectl create configmap app-settings --from-file=app-container/settings/app.properties
+```
+***
+#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+data:
+  player_initial_lives: "3"
+  ui_properties_file_name: "user-interface.properties"
+```
+***
+#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+```
+kubectl describe configmaps game-config
+```
+***
+#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+```
+kubectl delete configmaps game-config
 ```
