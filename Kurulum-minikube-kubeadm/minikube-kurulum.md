@@ -20,8 +20,8 @@ https://storage.googleapis.com/minikube/releases/latest/minikube-installer.exe
 ```
 minikube start
 ```
-***
 #### Kubectl Kur
+***
 ```
 curl "https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe"
 veya
