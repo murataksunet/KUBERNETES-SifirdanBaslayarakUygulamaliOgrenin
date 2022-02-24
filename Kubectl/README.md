@@ -1,6 +1,6 @@
-## 🧑 Ders: Multi-Container
+## 🧑 Ders: Kubectl Config
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Kubectl Config Yönetim işlemlerini bulacaksınız📗
 
 #### Kubectl Varlığını Kontrol Et
 ***
