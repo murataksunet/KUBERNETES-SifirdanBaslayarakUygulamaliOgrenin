@@ -1,4 +1,0 @@
-  system.data.name: "app-example"
-  system.data.url: "https://example.com"
-  system.data.type_one: "app-type-xxx"
-  system.data.value: "2"
