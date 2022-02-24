@@ -5,8 +5,8 @@
 #### Persistent Volume
 ***
 ```
-Persistent Volume, kubernetes cluster içerisinde herhangi bir node’a bağlı olmayan, kalıcı veri depolama alanını tanımlamak için kullandığımız nesnedir.
-Farklı veri depolama türlerini desteklemektedir.
+Persistent Volume, kubernetes cluster içerisinde herhangi bir node’a bağlı olmayan, kalıcı veri depolama alanını tanımlamak için 
+kullandığımız nesnedir. Farklı veri depolama türlerini desteklemektedir.
 ```
 ***
 #### Persistent Volume Clam
