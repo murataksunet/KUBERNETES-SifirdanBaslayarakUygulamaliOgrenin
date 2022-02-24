@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Kubectl(imperative) Yönetim işlemlerini bulacaksınız📗
 
-#### Kubernetes versiyon bilgisi öğrenme
+#### kubectl versiyon bilgisi öğren
 ***
 ```
 kubectl version
@@ -13,17 +13,17 @@ kubectl version
 kubectl run k8s-pod-1 --image=nginx
 ```
 ***
-#### Sistemde tanımlı POD'ları listeleme
+#### Sistemde tanımlı POD'ları listele
 ```
 kubectl get pods
 ```
 ***
-#### Sistemde tanımlı Deployment'ları listeleme
+#### Sistemde tanımlı Deployment'ları listele
 ```
 kubectl get deployment
 ```
 ***
-#### Sistemde tanımlı tüm nesneleri listeleme
+#### Sistemde tanımlı tüm nesneleri listele
 ```
 kubectl get all
 ```
@@ -38,7 +38,7 @@ kubectl describe deployment myproject-dep
 kubectl logs k8s-pod-1
 ```
 ***
-#### Özel image kullanarak POD oluşturma
+#### Özel image kullanarak POD oluştur
 ```
 kubectl run k8s-pod-2 --image=docker.io/murataksunet/k8s-hellothere --restart=Never
 ```
@@ -63,17 +63,17 @@ kubectl delete deployment x.yml
 kubectl exec -it k8s-web-1 -- /bin/bash
 ```
 ***
-#### Çalışan pod içerisine girmeden ana dizini listeleme
+#### Çalışan pod içerisine girmeden ana dizini listele
 ```
 kubectl exec k8s-web-1 -- ls -l
 ```
 ***
-#### Lokaldeki password.txt dosyasını POD içerisine kopyalama
+#### Lokaldeki password.txt dosyasını POD içerisine kopyala
 ```
 kubectl cp password.txt k8s-cp-1:tmp/
 ```
 ***
-#### POD içerisindeki dizindeki dosyaları lokale kopyalama
+#### POD içerisindeki dizindeki dosyaları lokale kopyala
 ```
 kubectl cp default/k8s-cp-1:/tmp/store/
 ```
@@ -88,12 +88,12 @@ kubectl port-forward mypod 8080:80
 kubectl get po --show-labels
 ```
 ***
-#### Label ataması yapılarak POD oluşturma  
+#### Label ataması yapalarak POD oluşturma  
 ```
 kubectl run k8s-label-2 --image=nginx --labels="env=prod,tier=frontend"
 ```
 ***
-#### Özel POD'a ait labelları listeleme
+#### Özel POD'a ait labelları listele
 ```
 kubectl get po k8s-label-1 --show-labels
 ```
@@ -103,7 +103,7 @@ kubectl get po k8s-label-1 --show-labels
 kubectl label pods k8s-label-1 env=demo --overwrite
 ```
 ***
-#### Sistemde çalışan tüm POD lar üzerine toplu label ataması yapma 
+#### Sistemde çalışan tüm PODlar üzerine toplu label ataması yapma 
 ```
 kubectl label pods --all status=healthy
 ```
