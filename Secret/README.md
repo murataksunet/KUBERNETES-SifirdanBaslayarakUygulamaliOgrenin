@@ -1,6 +1,6 @@
 ## 🧑 Ders: Secret
 
-### 📗Bu bölümde Secret Detayları Hakkında Bilgiler Bulacaksınız📗
+### 📗Bu Bölümde Secret Detayları Hakkında Bilgiler Bulacaksınız📗
 
 #### Boş Secret Nesnesi Oluşturma
 ***
