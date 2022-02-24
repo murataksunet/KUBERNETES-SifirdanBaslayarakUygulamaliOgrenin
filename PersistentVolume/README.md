@@ -17,4 +17,5 @@ Pod için talep edilen kapasiteyi PV üzerinde tanılayan nesnedir. Pod -> PVC -
 #### Storage Class
 ```
 Kubernetes üzerinde dinamik volume tanımlamak için kullanılan nesnedir.
+https://kubernetes.io/docs/concepts/storage/storage-classes/
 ```
