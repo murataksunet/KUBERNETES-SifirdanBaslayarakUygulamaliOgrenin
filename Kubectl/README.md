@@ -2,28 +2,63 @@
 
 ### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Kubectl Varlığını Kontrol Et
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl version --short
+```
+#### Kubectl Yoksa Kur
+***
+```
+curl "https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe"
+veya
+https://dl.k8s.io/release/v1.23.0/bin/windows/amd64/kubectl.exe
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### kubeconfig dosyasını görüntüle
 ```
-kubectl exec my-pod -c my-container -- ls / 
-```
-***
-#### Pod içerisindeki my-container loglarını listeleme
-```
-kubectl logs my-pod -c my-container 
+kubectl config view
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### kubeconfig'deki tüm clusterları görüntüle
 ```
-kubectl logs -l name=myLabel -c my-container 
+kubectl config get-clusters
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### kubeconfig'deki aktif olan config(*) bul
 ```
-kubectl port-forward multipod 8080:80
+kubectl config get-contexts
+```
+***
+#### kubeconfig'deki tüm userlerı görüntüle
+```
+kubectl config get-users
+```
+***
+#### Developer cluster ortamına geçiş yap
+```
+kubectl config use-context developer
+```
+***
+#### Aktif contexti görüntüle
+```
+kubectl config current-context
+```
+***
+#### kubeconfig doyasını sadece aktif context olacak şekilde görüntüle
+```
+kubectl config view --minify
+```
+***
+#### Config Silin
+```
+kubectl config delete-cluster research
+kubectl config delete-context research
+kubectl config delete-user research
+```
+***
+#### Minikube üzerindeki tüm cluster profilleri silin ve yeni bir cluster oluşturun 
+```
+minikube delete --all
+minikube start
 ```
