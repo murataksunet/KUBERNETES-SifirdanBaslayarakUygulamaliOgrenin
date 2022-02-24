@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: web-emptydir
+spec:
+ containers:
+ - image: httpd
+   name: web
+   volumeMounts:
+   - mountPath: /cache
+     name: cache-memory
+ - name: logs
+   image: alpine
+   command:
+   - "sleep"
+   - "infinity"
+   volumeMounts:
+   - mountPath: /cache
+     name: cache-memory
+ volumes:
+ - name: cache-memory
+   emptyDir: {}
