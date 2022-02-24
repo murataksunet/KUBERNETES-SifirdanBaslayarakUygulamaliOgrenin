@@ -2,28 +2,28 @@
 
 ### 📗Bu bölümde ConfigMap Nesne Yönetim işlemlerini bulacaksınız📗
 
-#### YAML dosyası hardware limit detayları
+#### Boş ConfigMap Nesnesi Oluşturma
 ***
 ```
 kubectl create configmap empty-config
 ```
 ***
-#### YAML Hardware detayları
+#### ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very
 ```
 ***
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### PConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap app-settings --from-file=app-container/settings/app.properties
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### YAML üzerinden ConfigMap Nesnesi Oluşturma
 ```
 apiVersion: v1
 kind: ConfigMap
@@ -34,12 +34,12 @@ data:
   ui_properties_file_name: "user-interface.properties"
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### ConfigMap Nesnesi Detaylarını Görüntüleme
 ```
 kubectl describe configmaps game-config
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### ConfigMap Nesnesi Silme
 ```
 kubectl delete configmaps game-config
 ```
