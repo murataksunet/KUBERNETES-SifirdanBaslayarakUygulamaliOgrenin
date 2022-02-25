@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗
 
-#### YAML dosyası üzerinde Deployment nesnesi oluşturma
+#### YAML dosyası üzerinden Deployment nesnesi oluşturma
 ***
 ```
 apiVersion: apps/v1
