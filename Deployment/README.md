@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗
 
-#### YAML dosyası hardware limit detayları
+#### YAML dosyası üzerinde Deployment nesnesi oluşturma
 ***
 ```
 apiVersion: apps/v1
@@ -10,58 +10,53 @@ kind: Deployment
 metadata:
   name: mydeploy
 ```
-#### YAML Hardware detayları
+#### Sistemde tanımlı Deployment'ları listeleme 
 ***
 ```
-kubectl get deployments/nginx-deployment
+kubectl get deployments
 ```
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### Sistemde tanımlı Deployment nesnesi detaylarını görüntüleme
 ***
 ```
-kubectl describe deploy/nginx-deployment
+kubectl describe deploy/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Deployment nesnesi ölçeklendirme
 ***
 ```
-kubectl scale deployment/nginx-deployment --replicas=10
+kubectl scale deployment/mydeploy --replicas=10
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Deployment nesnesi silme
 ***
 ```
-kubectl delete deploy/nginx-deployment
+kubectl delete deploy/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Deployment nesnesi detaylarına bakma
 ***
 ```
-kubectl edit deployment/nginx-deployment
+kubectl logs deploy/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Deployment nesnesi config dosyası düzenleme
 ***
 ```
-kubectl set image deployment/nginx-deployment nginx-cnt=nginx:1.16.1
+kubectl edit deployment/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### POD container image güncelleme
 ***
 ```
-kubectl set image deployment/nginx-deployment nginx-cnt=nginx:1.16.1
+kubectl set image deployment/mydeploy nginx-cnt=nginx:1.16.1
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Image güncelleme durumu kontrol etme
 ***
 ```
-kubectl rollout status deployment/nginx-deployment
+kubectl rollout status deployment/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Image revisyon geçmişini kontrol etme
 ***
 ```
-kubectl rollout history deployment/nginx-deployment
+kubectl rollout history deployment/mydeploy
 ```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### Önceki image revizyonlarına geri dönme
 ***
 ```
-kubectl rollout undo deployment/nginx-deployment
-```
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
-***
-```
-kubectl logs deploy/my-deployment 
+kubectl rollout undo deployment/mydeploy
 ```
