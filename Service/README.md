@@ -1,6 +1,6 @@
-## 🧑 Ders: Hardware-Limit
+## 🧑 Ders: Service
 
-### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Service Nesnesi Yönetim işlemlerini bulacaksınız📗
 
 #### YAML dosyası hardware limit detayları
 ***
