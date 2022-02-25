@@ -13,7 +13,7 @@ kubectl create configmap empty-config
 kubectl create configmap special-config --from-literal=special.how=very
 ```
 ***
-#### PConfigMap Nesnesi Oluşturma
+#### ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 ```
