@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde ReplicationController ve ReplicaSet Yönetim İşlemlerini Bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### YAML üzerinde ReplicationController nesnesi tanımlama
 ***
 ```
 apiVersion: v1
@@ -11,32 +11,32 @@ metadata:
   name: myrepc
 ```
 ***
-#### Pod içerisindeki my-container root dizini listeleme
+#### Sistemde tanımlı replicationcontroller nesnelerini listele
 ```
 kubectl get replicationcontroller
 ```
 ***
-#### Pod içerisindeki my-container loglarını listeleme
+#### Replicationcontroller nesnesi detaylarını görüntüle
 ```
 kubectl describe rc myrepc
 ```
 ***
-#### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
+#### Replicationcontroller nesnesi silme
 ```
 kubectl delete replicationcontroller/myrepc
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Replicationcontroller nesnesi pod sayısı ölçeklendirme
 ```
 kubectl scale replicationcontroller myrepc --replicas=10
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Replicationcontroller nesnesi config düzenleme
 ```
 kubectl edit replicationcontroller/rcontroller001
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### YAML üzerinde ReplicaSet nesnesi tanımlama
 ```
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -44,27 +44,27 @@ metadata:
   name: myreps
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### Sistemde tanımlı ReplicaSet nesnelerini listeleme
 ```
 kubectl get replicaset
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### ReplicaSet nesnesi detaylarını görüntüle
 ```
 kubectl describe rs myreps
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### ReplicaSet nesnesi silme
 ```
 kubectl delete rs/myreps
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### ReplicaSet nesnesi pod sayısı ölçeklendirme
 ```
 kubectl scale replicaset myreps --replicas=10
 ```
 ***
-#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+#### ReplicaSet nesnesi config düzenleme
 ```
 kubectl edit replicaset/myreps
 ```
