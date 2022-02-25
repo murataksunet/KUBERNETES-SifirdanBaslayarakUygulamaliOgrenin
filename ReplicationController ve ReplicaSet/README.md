@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde ReplicationController ve ReplicaSet Yönetim İşlemlerini Bulacaksınız📗
 
-#### YAML üzerinde ReplicationController nesnesi tanımlama
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ***
 ```
 apiVersion: v1
@@ -36,7 +36,7 @@ kubectl scale replicationcontroller myrepc --replicas=10
 kubectl edit replicationcontroller/rcontroller001
 ```
 ***
-#### YAML üzerinde ReplicaSet nesnesi tanımlama
+#### YAML dosyası üzerinden ReplicaSet nesnesi tanımlama
 ```
 apiVersion: apps/v1
 kind: ReplicaSet
