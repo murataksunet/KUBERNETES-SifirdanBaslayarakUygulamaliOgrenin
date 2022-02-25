@@ -4,13 +4,14 @@
 
 #### YAML dosyası hardware limit detayları
 ***
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mydeploy
 ```
-***
 #### YAML Hardware detayları
+***
 ```
 kubectl get deployments/nginx-deployment
 ```
