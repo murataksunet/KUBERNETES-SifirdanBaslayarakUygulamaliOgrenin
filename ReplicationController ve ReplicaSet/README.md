@@ -5,25 +5,66 @@
 #### Pod içerisindeki container1 bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myrepc
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
-kubectl exec my-pod -c my-container -- ls / 
+kubectl get replicationcontroller
 ```
 ***
 #### Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs my-pod -c my-container 
+kubectl describe rc myrepc
 ```
 ***
 #### name=myLabel etiketine sahip Pod içerisindeki my-container loglarını listeleme
 ```
-kubectl logs -l name=myLabel -c my-container 
+kubectl delete replicationcontroller/myrepc
 ```
 ***
 #### Multi-Container içerisindeki containerın 80 portuna yönlendirme
 ```
-kubectl port-forward multipod 8080:80
+kubectl scale replicationcontroller myrepc --replicas=10
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl edit replicationcontroller/rcontroller001
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myreps
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl get replicaset
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl describe rs myreps
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl delete rs/myreps
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl scale replicaset myreps --replicas=10
+```
+***
+#### Multi-Container içerisindeki containerın 80 portuna yönlendirme
+```
+kubectl edit replicaset/myreps
 ```
