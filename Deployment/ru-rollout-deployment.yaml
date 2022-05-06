@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ru-rollout-deployment
+  labels:
+    app: web
+spec:
+  replicas: 20
+  strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 2
+     maxSurge: 2
+  minReadySeconds: 5
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web
+    spec:
+      containers:
+      - image: murataksunet/web-site-versions:v1
+        name: web-container
+        ports:
+        - containerPort: 80
