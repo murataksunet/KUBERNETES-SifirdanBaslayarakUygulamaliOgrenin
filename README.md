@@ -10,9 +10,9 @@
 
 </body>
 </html>
-Arkadaşlar Merhaba;
-Kubernetes:Sıfırdan Uygulamalı Öğrenin
-Eğitimime Hepiniz Hoşgeldiniz 
+Arkadaşlar Merhaba;<p>
+Kubernetes:Sıfırdan Uygulamalı Öğrenin<p>
+Eğitimime Hepiniz Hoşgeldiniz <p>
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
 
