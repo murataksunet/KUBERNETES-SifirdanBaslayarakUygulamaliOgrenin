@@ -10,7 +10,9 @@
 
 </body>
 </html>
-Çok Değerli, Pek Kıymetli Arkadaşlarım Kubernetes:Sıfırdan Başlarak Öğrenin Eğitimime Hepiniz Hoşgeldiniz 
+Arkadaşlar Merhaba;
+Kubernetes:Sıfırdan Uygulamalı Öğrenin
+Eğitimime Hepiniz Hoşgeldiniz 
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
 
