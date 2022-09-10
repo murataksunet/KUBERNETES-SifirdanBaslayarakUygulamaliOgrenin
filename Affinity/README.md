@@ -2,6 +2,11 @@
 
 ### 📗Bu bölümde Affinity Yönetim işlemlerini bulacaksınız📗
 
+#### Nedir ?
+***
+```
+Affinity, Nodeselector yerine daha karmaşık ifadeler yazarak podları dilediğimiz nodelar üzerine yönlendirmenin bir diğer yoludur. 
+```
 #### Node üzerine label atama
 ***
 ```
