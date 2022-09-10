@@ -70,5 +70,5 @@ kubectl get storageclass
 ***
 #### Tanımlı Storage Class nesnesi detaylarını görüntüle
 ```
-kubectl describe storageclass
+kubectl describe sc
 ```
