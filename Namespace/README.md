@@ -1,6 +1,6 @@
 ## 🧑 Ders: Namespace
 
-### 📗Bu bölümde YAML dosyası üzerinden Namespace Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde YAML dosyası üzerinde Namespace Pod Yönetim işlemlerini bulacaksınız📗
 
 ***
 #### YAML dosyası üzerinden namespace oluşturma
