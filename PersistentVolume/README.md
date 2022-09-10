@@ -27,6 +27,18 @@ rbd - Rados Block Device (RBD) volume
 
 ```
 ***
+#### Tüm persistentvolume leri listele
+```
+kubectl get persistentvolume
+
+```
+***
+#### Tüm persistentvolumeclaim leri listele
+```
+kubectl get persistentvolumeclaim
+
+```
+***
 #### pv-volume isimli persistentvolume nesnesini listele
 ```
 kubectl get persistentvolume pv-volume
@@ -56,9 +68,4 @@ kubectl describe pv pv-volume
 
 
 ```
-***
-#### Storage Class
-```
 
-
-```
