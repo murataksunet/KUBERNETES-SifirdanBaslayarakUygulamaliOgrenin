@@ -51,3 +51,4 @@ kubectl exec nginx-env -- printenv
 ```
 kubectl describe pod nginx-env 
 ```
+
