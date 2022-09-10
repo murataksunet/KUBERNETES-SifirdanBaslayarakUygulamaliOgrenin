@@ -6,7 +6,16 @@
 ***
 ```
 kubectl create deployment my-dep --image=busybox
-
+```
+#### Komut ile Deployment nesnesi oluşturma
+***
+```
+kubectl create deployment my-dep --image=busybox -- date
+```
+#### 3 kopyalı deployment nesnesi oluşturma
+***
+```
+kubectl create deployment my-dep --image=nginx --replicas=3
 ```
 #### YAML dosyası üzerinden Deployment nesnesi oluşturma
 ***
