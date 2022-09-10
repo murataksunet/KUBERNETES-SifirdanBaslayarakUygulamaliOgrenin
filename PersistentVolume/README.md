@@ -63,9 +63,12 @@ kubectl describe pv pv-volume
 
 ```
 ***
-#### Storage Class
+#### Tanımlı tüm Storage Class nesnelerini görüntüle
 ```
-
-
+kubectl get storageclass
 ```
-
+***
+#### Tanımlı Storage Class nesnesi detaylarını görüntüle
+```
+kubectl describe storageclass
+```
