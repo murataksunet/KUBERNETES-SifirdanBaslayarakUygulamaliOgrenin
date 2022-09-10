@@ -106,3 +106,4 @@ kubectl apply (-f FILENAME | -k DIRECTORY) [options]
 kubectl delete -f ./my-manifest.yaml 
 ```
 ***
+
