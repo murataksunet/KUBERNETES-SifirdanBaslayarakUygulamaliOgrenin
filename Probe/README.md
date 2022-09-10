@@ -38,3 +38,4 @@ timeoutSeconds: Zaman aşımının sona ereceği süre (default: 1)
 successThreshold: Konteynerin doğru çalışmasını belirleyeceği minimum başarılı deneme sayısı (default: 1)
 failureThreshold: Yeniden başlatılacağı başarısız deneme sayısı (default: 3)
 ```
+
