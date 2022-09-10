@@ -1,6 +1,6 @@
 ## 🧑 Ders: Taint Toleration
 
-### 📗Bu bölümde Taint Toleration Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Taint&Toleration Yönetim işlemlerini bulacaksınız📗
 
 #### Node üzerine Label bilgisi atama
 ***
