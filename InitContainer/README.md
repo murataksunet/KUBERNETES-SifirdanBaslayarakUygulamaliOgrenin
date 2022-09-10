@@ -31,12 +31,27 @@ Containers:
 [...]
 ```
 ***
+#### Init Container durumlarına kontrol etme
+```
+kubectl get pod nginx --template '{{.status.initContainerStatuses}}'
+```
+***
+#### Pod içerisindeki init-mydb loglarının listelenmesi
+```
+kubectl logs <pod-name> -c <init-container-2>
+```
+***
 #### Pod içerisindeki init-mydb loglarının listelenmesi
 ```
 kubectl logs --container=init-mydb initpod
 ```
 ***
-#### Pod nesnesinin silinmesi
+#### InitContainer Status Anlamları
 ```
-kubectl delete -f initcontainer.yaml
+Status	Meaning
+Init:N/M	The Pod has M Init Containers, and N have completed so far.
+Init:Error	An Init Container has failed to execute.
+Init:CrashLoopBackOff	An Init Container has failed repeatedly.
+Pending	The Pod has not yet begun executing Init Containers.
+PodInitializing or Running	The Pod has already finished executing Init Containers.
 ```
