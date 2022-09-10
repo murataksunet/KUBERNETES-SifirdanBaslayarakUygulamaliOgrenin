@@ -36,6 +36,11 @@ Containers:
 kubectl get pod nginx --template '{{.status.initContainerStatuses}}'
 ```
 ***
+#### Pod içerisindeki init container dizin listelemesi yapma
+```
+kubectl exec pod/nginx -c c1 -- ls -l /data-ro
+```
+***
 #### Pod içerisindeki init-mydb loglarının listelenmesi
 ```
 kubectl logs <pod-name> -c <init-container-2>
@@ -44,6 +49,11 @@ kubectl logs <pod-name> -c <init-container-2>
 #### Pod içerisindeki init-mydb loglarının listelenmesi
 ```
 kubectl logs --container=init-mydb initpod
+```
+***
+#### Pod içerisindeki init contailer'ları kontrol etme
+```
+kubectl get pod -l app=sleep -o jsonpath='{.items[0].status.initContainerStatuses[*].name}'
 ```
 ***
 #### InitContainer Status Anlamları
