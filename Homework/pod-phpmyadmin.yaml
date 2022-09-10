@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-phpmyadmn
+  namespace: myproject
+  labels:
+    app: phpmyadmin
+    env: prodoction
+spec:
+  containers:
+        - name: phpmyadmin
+          image: phpmyadmin/phpmyadmin
+          resources:
+            limits:
+               memory: "256M"
+               cpu: "0.5"
+            requests:
+               memory: "20M"
+               cpu: "0.1"
+          ports:
+            - containerPort: 80
+          env:
+            - name: PMA_HOST
+              value: "DatabasePODIDAddress"
+            - name: PMA_PORT
+              value: "3306"
+            - name: MYSQL_ROOT_PASSWORD
+              value: "onetwothree!"
