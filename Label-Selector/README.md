@@ -69,3 +69,4 @@ kubectl label node minikube kubernetes.io/say-
 ```
 kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version-
 ```
+
