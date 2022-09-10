@@ -11,11 +11,54 @@ kullandığımız nesnedir. Farklı veri depolama türlerini desteklemektedir.
 ***
 #### Persistent Volume Clam
 ```
-Pod için talep edilen kapasiteyi PV üzerinde tanılayan nesnedir. Pod -> PVC -> PV -> Storage
+Pod için talep edilen kapasiteyi PV üzerinden tanılayan nesnedir. Pod -> PVC -> PV -> Storage
+```
+***
+#### Desteklenen PersistentVolume Türleri
+```
+cephfs - CephFS volume
+csi - Container Storage Interface (CSI)
+fc - Fibre Channel (FC) storage
+hostPath - HostPath volume (for single node testing only; WILL NOT WORK in a multi-node cluster; consider using local volume instead)
+iscsi - iSCSI (SCSI over IP) storage
+local - local storage devices mounted on nodes.
+nfs - Network File System (NFS) storage
+rbd - Rados Block Device (RBD) volume
+
+```
+***
+#### pv-volume isimli persistentvolume nesnesini listele
+```
+kubectl get persistentvolume pv-volume
+
+```
+***
+#### pvc-volume isimli persistentvolumeclaim nesnesini listele
+```
+kubectl get pvc pvc-volume
+
+```
+***
+#### pvc-volume isimli persistentvolumeclaim nesnesi detaylarını görüntüle
+```
+kubectl describe pvc pvc-volume
+
+```
+***
+#### pv-volume isimli persistentvolume nesnesini detaylarını görüntüle
+```
+kubectl describe pv pv-volume
+
 ```
 ***
 #### Storage Class
 ```
-Kubernetes üzerinde dinamik volume tanımlamak için kullanılan nesnedir.
-https://kubernetes.io/docs/concepts/storage/storage-classes/
+
+
+```
+***
+#### Storage Class
+```
+
+
 ```
