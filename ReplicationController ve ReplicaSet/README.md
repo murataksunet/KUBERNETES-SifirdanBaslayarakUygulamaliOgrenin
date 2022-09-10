@@ -11,9 +11,8 @@ kind: ReplicationController
 metadata:
   name: myrepc
 ```
-
-#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ***
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ```
 apiVersion: v1
 kind: ReplicationController
@@ -22,7 +21,6 @@ metadata:
 ```
 ***
 #### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
-***
 ```
 apiVersion: v1
 kind: ReplicationController
