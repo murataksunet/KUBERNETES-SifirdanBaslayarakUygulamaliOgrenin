@@ -62,3 +62,4 @@ kubectl config delete-user research
 minikube delete --all
 minikube start
 ```
+
