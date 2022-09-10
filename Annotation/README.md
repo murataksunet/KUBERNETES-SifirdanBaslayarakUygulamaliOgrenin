@@ -46,3 +46,4 @@ kubectl annotate service quote a8r.io/owner=”@sally”
 ```
 kubectl describe pod mysql
 ```
+
