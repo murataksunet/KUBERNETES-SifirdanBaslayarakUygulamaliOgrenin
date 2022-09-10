@@ -5,6 +5,20 @@
 ***
 #### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ```
+kubectl create deployment my-dep --image=busybox
+
+```
+***
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myrepc
+```
+***
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
+```
 apiVersion: v1
 kind: ReplicationController
 metadata:
