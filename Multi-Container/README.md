@@ -27,3 +27,4 @@ kubectl logs -l name=myLabel -c my-container
 ```
 kubectl port-forward multipod 8080:80
 ```
+
