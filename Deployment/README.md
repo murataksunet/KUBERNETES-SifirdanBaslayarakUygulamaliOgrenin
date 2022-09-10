@@ -2,6 +2,12 @@
 
 ### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗
 
+#### Deployment nesnesi oluşturma
+***
+```
+kubectl create deployment my-dep --image=busybox
+
+```
 #### YAML dosyası üzerinden Deployment nesnesi oluşturma
 ***
 ```
