@@ -2,9 +2,8 @@
 
 ### 📗Bu bölümde ReplicationController ve ReplicaSet Yönetim İşlemlerini Bulacaksınız📗
 
-
-#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ***
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ```
 apiVersion: v1
 kind: ReplicationController
