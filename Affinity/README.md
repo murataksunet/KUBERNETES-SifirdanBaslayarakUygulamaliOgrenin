@@ -95,4 +95,3 @@ beta.kubernetes.io/arch
               - S2
           topologyKey: topology.kubernetes.io/hostname
 ```
-
