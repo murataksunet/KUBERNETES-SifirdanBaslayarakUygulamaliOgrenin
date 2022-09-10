@@ -75,3 +75,8 @@ kubectl rollout history deployment/mydeploy
 ```
 kubectl rollout undo deployment/mydeploy
 ```
+#### Önceki belirlenen image revizyonlarına geri dönme
+***
+```
+kubectl rollout undo deployment/app --to-revision=2
+```
