@@ -68,3 +68,4 @@ kubectl scale replicaset myreps --replicas=10
 ```
 kubectl edit replicaset/myreps
 ```
+
