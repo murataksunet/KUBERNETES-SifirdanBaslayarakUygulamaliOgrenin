@@ -3,7 +3,7 @@
 ### 📗Bu bölümde Service Nesnesi Yönetim işlemlerini bulacaksınız📗
 
 ***
-#### YAML dosyası service oluşturma
+#### YAML dosyası üzerinden service nesnesi tanımlama
 ```
 apiVersion: v1
 kind: Service
@@ -11,29 +11,29 @@ metadata:
   name: my-service
 ```
 ***
-#### YAML Hardware detayları
+#### Pod nesnesi için service nesnesi tanımlama
 ```
 kubectl expose pod/my-nginx
 ```
 ***
-#### Pod'un kullandığı CPU-MEMORY kulllanım değerini görüntüleme
+#### Deployment nesnesi için LoadBalancer service nesnesi tanımlama
 ```
 kubectl expose deployment myweb --port 80 --type=LoadBalancer
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### my-nginx service nesnesini listeleme
 ```
 kubectl get svc my-nginx
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### my-nginx service nesnesi detaylarını görüntüleme
 ```
 kubectl describe svc my-nginx
 ```
 ***
-#### Tüm namespacelerdeki POD ların cpu-memory kullanım değerlerini görüntüleme
+#### my-dep nesnesi için oluşturulan endpointleri listele 
 ```
-kubectl get ep my-nginx
+kubectl get ep my-dep
 ```
 
 
