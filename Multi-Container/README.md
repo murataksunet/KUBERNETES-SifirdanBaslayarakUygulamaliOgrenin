@@ -8,6 +8,12 @@
 kubectl exec -it multipod -c container1 -- bash
 ```
 ***
+#### Pod içerisinde 1st container da bulunan index.html dosyasını görüntüleme   
+***
+```
+kubectl exec mc1 -c 1st -- /bin/cat /usr/share/nginx/html/index.html
+```
+***
 #### Pod içerisindeki my-container root dizini listeleme
 ```
 kubectl exec my-pod -c my-container -- ls / 
