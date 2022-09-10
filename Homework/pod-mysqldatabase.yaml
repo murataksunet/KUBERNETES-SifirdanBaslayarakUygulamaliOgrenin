@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-mysql-db
+  namespace: myproject
+  labels:
+    app: mysqldb
+    env: prodoction
+  annotations:
+    owner: "Murat AKSU"
+    mail: "admin@murataksu.net"
+spec:
+  containers:
+  - name: mysqldb
+    image: mysql:5.6
+    env:
+     - name: MYSQL_ROOT_PASSWORD
+       value: onetwothree!
+    ports:
+      - containerPort: 3306
