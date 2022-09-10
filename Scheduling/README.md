@@ -36,3 +36,4 @@ kubectl get node minikube-m03 --show-labels
 ```
 kubectl get pods -o wide
 ```
+
