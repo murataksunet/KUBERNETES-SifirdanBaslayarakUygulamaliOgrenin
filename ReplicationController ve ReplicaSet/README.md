@@ -2,6 +2,25 @@
 
 ### 📗Bu bölümde ReplicationController ve ReplicaSet Yönetim İşlemlerini Bulacaksınız📗
 
+
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
+***
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myrepc
+```
+***
+#### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
+***
+```
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myrepc
+```
+***
 #### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ***
 ```
