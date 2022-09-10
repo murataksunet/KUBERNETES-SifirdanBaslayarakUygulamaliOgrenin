@@ -61,3 +61,4 @@ kubectl get pods --namespace=developer
 ```
 # kubectl delete ns developer
 ```
+
