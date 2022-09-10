@@ -72,3 +72,4 @@ kubectl get storageclass
 ```
 kubectl describe sc
 ```
+
