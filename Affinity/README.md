@@ -33,7 +33,7 @@ beta.kubernetes.io/arch
 
 ```
 ***
-#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme - Zorunlu
+#### Örn: POD'u Linux işletim sistemli node üzerine yönlendirme - Zorunlu
 ```
   affinity:
     nodeAffinity:
@@ -46,7 +46,7 @@ beta.kubernetes.io/arch
             - linux
 ```
 ***
-#### Örn: POD'u Linux işletim sistemlerinden -Ubuntu veya Centos - üzerine yönlendirme - Tercih
+#### Örn: POD'u Linux işletim sistemlerinden -Ubuntu veya Centos - node üzerine yönlendirme - Tercih
 ```
   affinity:
     nodeAffinity:
@@ -67,28 +67,31 @@ beta.kubernetes.io/arch
             - centos
 ```
 ***
-#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+#### Örn: POD'u security=S1 etiketine sahip olan bir zone içerisinde oluştur - Zorunluluk 
 ```
   affinity:
-    nodeAffinity:
+    podAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/os
+      - labelSelector:
+          matchExpressions:
+          - key: security
             operator: In
             values:
-            - linux
+            - S1
+        topologyKey: topology.kubernetes.io/zone
 ```
 ***
-#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+#### Örn: POD'u security=S2 etiketine sahip OLMAYAN bir zone içerisinde oluştur - Tercih 
 ```
-  affinity:
-    nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/os
-            operator: In
-            values:
-            - linux
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+            - key: security
+              operator: In
+              values:
+              - S2
+          topologyKey: topology.kubernetes.io/zone
 ```
