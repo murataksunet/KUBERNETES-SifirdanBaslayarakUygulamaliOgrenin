@@ -44,3 +44,4 @@ kubectl describe secrets/db-user-pass
 ```
 kubectl delete secret db-user-pass
 ```
+
