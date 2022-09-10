@@ -46,4 +46,3 @@ tolerations:
   operator: "Exists"
   effect: "NoSchedule"
 ```
-
