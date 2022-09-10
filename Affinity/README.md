@@ -33,7 +33,7 @@ beta.kubernetes.io/arch
 
 ```
 ***
-#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme - Zorunlu
 ```
   affinity:
     nodeAffinity:
@@ -46,17 +46,25 @@ beta.kubernetes.io/arch
             - linux
 ```
 ***
-#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+#### Örn: POD'u Linux işletim sistemlerinden -Ubuntu veya Centos - üzerine yönlendirme - Tercih
 ```
   affinity:
     nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-        nodeSelectorTerms:
-        - matchExpressions:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
           - key: kubernetes.io/os
             operator: In
             values:
-            - linux
+            - ubuntu
+      - weight: 50
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - centos
 ```
 ***
 #### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
