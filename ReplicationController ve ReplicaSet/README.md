@@ -11,7 +11,7 @@ kind: ReplicationController
 metadata:
   name: myrepc
 ```
-***
+
 #### YAML dosyası üzerinden ReplicationController nesnesi tanımlama
 ***
 ```
