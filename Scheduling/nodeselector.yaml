@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodeslctor-mysql
+spec:
+  nodeSelector:
+    disktype: ssd
+  containers:
+  - name: env-mysql-demo
+    image: mysql:5.6
+    env:
+    - name: MYSQL_USER
+      value: "admin"
+    - name: MYSQL_DATABASE
+      value: "test-db"
+    - name: MYSQL_ROOT_PASSWORD
+      value: "onetwothree!"
+    - name: MYSQL_HOST
+      value: "mysql-service"
+    - name: MYSQL_TCP_PORT
+      value: "3306"
+    ports:
+    - containerPort: 3306
