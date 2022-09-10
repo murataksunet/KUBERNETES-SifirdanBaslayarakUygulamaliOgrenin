@@ -81,7 +81,7 @@ beta.kubernetes.io/arch
         topologyKey: topology.kubernetes.io/zone
 ```
 ***
-#### Örn: POD'u security=S2 etiketine sahip OLMAYAN bir zone içerisinde oluştur - Tercih 
+#### Örn: POD'u security=S2 etiketine sahip OLMAYAN bir hostname içerisinde oluştur - Tercih 
 ```
     podAntiAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
@@ -93,6 +93,6 @@ beta.kubernetes.io/arch
               operator: In
               values:
               - S2
-          topologyKey: topology.kubernetes.io/zone
+          topologyKey: topology.kubernetes.io/hostname
 ```
 
