@@ -7,21 +7,30 @@
 ```
 Affinity, Nodeselector yerine daha karmaşık ifadeler yazarak podları dilediğimiz nodelar üzerine yönlendirmenin bir diğer yoludur. 
 ```
-#### Node üzerine label atama
+#### Affinity Türleri
 ***
 ```
-kubectl label node minikube-m03 disktype=ssd
+  Node Affinity
+  Node Anti-Affinity
 ```
 ***
-#### Nodelar üzerinde bulunan labelları listeleme
+#### Seçim İşlemi
 ```
-kubectl get node minikube-m03 --show-labels
+Zorunluluk:
+requiredDuringSchedulingIgnoredDuringExecution
+Tercih:
+preferredDuringSchedulingIgnoredDuringExecution
 ```
 ***
-#### YAML dosyasında , podun talep edilen node üzerinde oluşturulması için, label bilgisinin yazılması
+#### Node üzerinde standart eklenen label bilgileri
 ```
-  nodeSelector:
-    disktype: ssd
+kubernetes.io/hostname
+failure-domain.beta.kubernetes.io/zone
+failure-domain.beta.kubernetes.io/region
+beta.kubernetes.io/instance-type
+beta.kubernetes.io/os
+beta.kubernetes.io/arch
+
 ```
 ***
 #### POD'un talep edilen node üzerinde oluşturulduğunun kontrolü
