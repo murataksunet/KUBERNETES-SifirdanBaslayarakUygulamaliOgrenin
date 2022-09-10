@@ -33,7 +33,54 @@ beta.kubernetes.io/arch
 
 ```
 ***
-#### POD'un talep edilen node üzerinde oluşturulduğunun kontrolü
+#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
 ```
-kubectl get pods -o wide
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - linux
+```
+***
+#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+```
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - linux
+```
+***
+#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+```
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - linux
+```
+***
+#### Örn: POD'u Linux işletim sistemi üzerinde yönlendirme 
+```
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - linux
 ```
