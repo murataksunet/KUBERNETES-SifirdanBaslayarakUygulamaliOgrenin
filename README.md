@@ -10,8 +10,7 @@
 
 </body>
 </html>
-Arkadaşlar Merhaba;<p>
-Kubernetes:Sıfırdan Uygulamalı Öğrenin<p>
+<p>
 Eğitimime Hepiniz Hoşgeldiniz <p>
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
