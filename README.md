@@ -11,7 +11,7 @@
 </body>
 </html>
 <p>
-Eğitimime Hepiniz Hoşgeldiniz <p>
+Eğitimime Hoşgeldiniz <p>
 
 Eğitim hazırlıkları tüm hızıyla devam etmektedir . Tamamlandığında bu kısımda bilgilendirme yapılacaktır.
 
