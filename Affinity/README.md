@@ -66,7 +66,7 @@ beta.kubernetes.io/arch
             - centos
 ```
 ***
-#### Örn: POD'u security=S1 etiketine sahip olan bir zone içerisinde oluştur - Zorunluluk 
+#### Örn: POD'u security=S1 etiketine sahip olan bir zone içerisinde oluşturma - Zorunluluk 
 ```
   affinity:
     podAffinity:
@@ -80,7 +80,7 @@ beta.kubernetes.io/arch
         topologyKey: topology.kubernetes.io/zone
 ```
 ***
-#### Örn: POD'u security=S2 etiketine sahip OLMAYAN bir hostname içerisinde oluştur - Tercih 
+#### Örn: POD'u security=S2 etiketine sahip OLMAYAN bir hostname içerisinde oluşturma - Tercih 
 ```
     podAntiAffinity:
       preferredDuringSchedulingIgnoredDuringExecution:
