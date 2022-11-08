@@ -36,22 +36,18 @@ Containers:
 kubectl get pod nginx --template '{{.status.initContainerStatuses}}'
 ```
 ***
-#### Pod içerisindeki init container dizin listelemesi yapma
+#### Pod içerisindeki init containerın root dizini listeleme
 ```
-kubectl exec pod/nginx -c c1 -- ls -l /data-ro
+kubectl exec pod/nginx --container c1 -- ls -l
 ```
 ***
 #### Pod içerisindeki container loglarını listeleme
 ```
-kubectl logs <pod-name> -c <init-container-2>
+kubectl logs <pod-ismi> --container <init-container-ismi>
+Ör:kubectl logs --container=init-mydb initpod
 ```
 ***
-#### Pod içerisindeki init-mydb loglarını listeleme
-```
-kubectl logs --container=init-mydb initpod
-```
-***
-#### Pod içerisindeki init contailer'ları kontrol etme
+#### Label değeri app=sleep olan Pod içerisindeki init contailer'ların durumlarını json formayında görüntüleme
 ```
 kubectl get pod -l app=sleep -o jsonpath='{.items[0].status.initContainerStatuses[*].name}'
 ```
@@ -60,8 +56,8 @@ kubectl get pod -l app=sleep -o jsonpath='{.items[0].status.initContainerStatuse
 ```
 Status	Meaning
 Init:N/M	The Pod has M Init Containers, and N have completed so far.
-Init:Error	An Init Container has failed to execute.
-Init:CrashLoopBackOff	An Init Container has failed repeatedly.
-Pending	The Pod has not yet begun executing Init Containers.
-PodInitializing or Running	The Pod has already finished executing Init Containers.
+Init:Error	Bir Başlangıç Konteyneri çalıştırılamadı.
+Init:CrashLoopBackOff	Bir Başlangıç Konteyneri tekrar tekrar başarısız oldu.
+Pending	Henüz init containerı çalışmaya başlamadı.
+PodInitializing or Running	Pod, ini-containerı çalıştımayı tamamladı
 ```
