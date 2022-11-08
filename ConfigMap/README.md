@@ -8,17 +8,17 @@
 kubectl create configmap empty-config
 ```
 ***
-#### ConfigMap Nesnesi Oluşturma
+#### Tek tanımlı ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very
 ```
 ***
-#### ConfigMap Nesnesi Oluşturma
+#### Çok tanımlı ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very --from-literal=special.type=charm
 ```
 ***
-#### ConfigMap Nesnesi Oluşturma
+#### Dosya Üzerinden ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap app-settings --from-file=app-container/settings/app.properties
 ```
