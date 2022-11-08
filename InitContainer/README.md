@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisinde main container ayağa kalkmadan önce diğer containerın çalışması 
+#### Init-Container- Pod içerisinde main container ayağa kalkmadan önce diğer containerın öncelikli olarak çalıştırılması
 ***
 ```
 Name:          myapp-pod
