@@ -5,7 +5,7 @@
 #### ConfigMap Nesnesi Oluşturma
 ***
 ```
-kubectl create configmap "configmap_ismi" --from-literal="anahtar"="değer" --from-file="anahtar"="değerin_okunacagi_dosya" --from-file="değerin_okunacagi_dosya"
+kubectl create configmap "configmap-ismi" --from-literal="anahtar"="değer" --from-file="anahtar"="değerin-okunacagi-dosya" --from-file="değerin-okunacagi-dosya"
 ```
 ***
 #### Boş ConfigMap Nesnesi Oluşturma
