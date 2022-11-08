@@ -2,7 +2,7 @@
 
 ### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Init-Container- Pod içerisinde main container ayağa kalkmadan önce diğer containerın öncelikli olarak çalıştırılması
+#### Init-Container, Pod içerisinde ana container ayağa kalkmadan önce init-containerın öncelikli olarak çalıştırılması
 ***
 ```
 Name:          myapp-pod
@@ -56,7 +56,7 @@ kubectl get pod -l app=sleep -o jsonpath='{.items[0].status.initContainerStatuse
 ```
 Status	Meaning
 Init:N/M	The Pod has M Init Containers, and N have completed so far.
-Init:Error	Bir Başlangıç Konteyneri çalıştırılamadı.
+Init:Error	Init-Container çalıştırılamadı.
 Init:CrashLoopBackOff	Bir Başlangıç Konteyneri tekrar tekrar başarısız oldu.
 Pending	Henüz init containerı çalışmaya başlamadı.
 PodInitializing or Running	Pod, ini-containerı çalıştımayı tamamladı
