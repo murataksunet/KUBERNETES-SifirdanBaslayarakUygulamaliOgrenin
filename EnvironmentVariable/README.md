@@ -9,13 +9,6 @@
 Envieronment Variable, POD içerisinde ortam değişkenleri tanımlamak için kullanılmaktadır.
 
 Örnek:
-NODE_VERSION=4.4.2
-EXAMPLE_SERVICE_PORT_8080_TCP_ADDR=10.3.245.237
-HOSTNAME=envar-demo
-...
-DEMO_GREETING=Hello from the environment
-DEMO_FAREWELL=Such a sweet sorrow
-
 BACKEND_SRV_SERVICE_HOST = 10.147.252.185
 BACKEND_SRV_SERVICE_PORT = 5000
 KUBERNETES_RO_SERVICE_HOST = 10.147.240.1
@@ -43,10 +36,5 @@ kubectl exec nginx-env -- printenv
       value: mysql
     - name: PMA_PORT
       value: "3306"
-```
-***
-#### Pod detaylarında ENV bilgilerini görüntüleme
-```
-kubectl describe pod nginx-env 
 ```
 
