@@ -8,6 +8,10 @@
 kubectl create configmap empty-config
 ```
 ***
+```
+kubectl create configmap empty-config
+```
+***
 #### Tek tanımlı ConfigMap Nesnesi Oluşturma
 ```
 kubectl create configmap special-config --from-literal=special.how=very
