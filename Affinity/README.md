@@ -10,8 +10,7 @@ Affinity, Nodeselector yerine daha karmaşık ifadeler yazarak podları dilediğ
 #### Affinity Türleri
 ***
 ```
-  Node Affinity
-  Node Anti-Affinity
+  Node - Pod Affinity / Anti-Affinity
 ```
 ***
 #### Seçim İşlemi
