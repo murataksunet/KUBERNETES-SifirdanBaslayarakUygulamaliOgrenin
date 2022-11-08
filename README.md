@@ -1,4 +1,4 @@
-# Kubernetes Sifirdan Uygulamalı Öğrenin
+# Kubernetes: Sıfırdan Başlayarak Uygulamalı Öğrenin
 
 <html>
 <body>
