@@ -2,7 +2,8 @@
 
 ### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗
 
-#### Deployment nesnesi oluşturma
+#### Imperative yöntemle Deployment oluşturma
+
 ***
 ```
 kubectl create deployment my-dep --image=busybox
