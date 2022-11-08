@@ -6,10 +6,10 @@
 ***
 ```
     resources:
-      requests:           ## Node üzerinde olması istenilen hardware limit
+      requests:           ## Node üzerinde olması istenilen kaynak değeri
         cpu: 100m
         memory: 128Mi
-      limits:             ## Hardware'in kullanabileceği üst limit
+      limits:             ## Kullanabilecek üst limit
         cpu: 250m
         memory: 256Mi
 ```
@@ -33,4 +33,8 @@ kubectl top pod cpuramlimit-pod
 ```
 kubectl top pods -A
 ```
-
+***
+#### Kubernetes node'lar üstünde ki cpu-memory kullanım değerlerini görüntüleme
+```
+kubectl top node 
+```
