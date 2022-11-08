@@ -6,11 +6,8 @@
 #### Nedir ?
 ***
 ```
-Envieronment Variable, POD içerisinde ortam değişkenleri tanımlamak için kullanılmaktadır
-```
-***
-#### Pod içerisindeki Kubernetes environment variables
-```
+Envieronment Variable, POD içerisinde ortam değişkenleri tanımlamak için kullanılmaktadır.
+Örnek:
 NODE_VERSION=4.4.2
 EXAMPLE_SERVICE_PORT_8080_TCP_ADDR=10.3.245.237
 HOSTNAME=envar-demo
