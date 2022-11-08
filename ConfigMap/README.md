@@ -2,12 +2,13 @@
 
 ### 📗Bu bölümde ConfigMap Nesne Yönetim işlemlerini bulacaksınız📗
 
+#### ConfigMap Nesnesi Oluşturma
+***
+```
+kubectl create configmap "configmap_ismi" --from-literal="anahtar"="değer" --from-file="anahtar"="değerin_okunacagi_dosya" --from-file="değerin_okunacagi_dosya"
+```
+***
 #### Boş ConfigMap Nesnesi Oluşturma
-***
-```
-kubectl create configmap empty-config
-```
-***
 ```
 kubectl create configmap empty-config
 ```
