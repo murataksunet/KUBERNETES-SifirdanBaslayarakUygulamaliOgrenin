@@ -59,7 +59,7 @@ kubectl edit deployment/mydeploy
 #### POD container image güncelleme
 ***
 ```
-kubectl set image deployment/"deployment_ismi" "container_ismi"="yeni_imaj"  
+kubectl set image deployment/"deployment-ismi" "container-ismi"="yeni-imaj"  
 Ör:kubectl set image deployment/mydeploy nginx-cnt=nginx:1.16.1
 ```
 #### Image güncelleme durumunu kontrol etme
