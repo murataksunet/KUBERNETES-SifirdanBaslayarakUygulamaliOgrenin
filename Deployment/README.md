@@ -8,17 +8,17 @@
 ```
 kubectl create deployment my-dep --image=busybox
 ```
-#### Komut ile Deployment nesnesi oluşturma
-***
-```
-kubectl create deployment my-dep --image=busybox -- date
-```
-#### 3 kopyalı deployment nesnesi oluşturma
+#### 3 Pod kopyalı deployment nesnesi oluşturma
 ***
 ```
 kubectl create deployment my-dep --image=nginx --replicas=3
 ```
-#### YAML dosyası üzerinden Deployment nesnesi oluşturma
+#### Komut Çalıştırarak Deployment nesnesi oluşturma
+***
+```
+kubectl create deployment my-dep --image=busybox -- date
+```
+#### Declarative yöntemle Deployment nesnesi oluşturma
 ***
 ```
 apiVersion: apps/v1
@@ -44,7 +44,7 @@ kubectl scale deployment/mydeploy --replicas=10
 #### Deployment nesnesi silme
 ***
 ```
-kubectl delete deploy/mydeploy
+kubectl delete deployment mydeploy
 ```
 #### Deployment nesnesi detaylarına bakma
 ***
@@ -59,19 +59,20 @@ kubectl edit deployment/mydeploy
 #### POD container image güncelleme
 ***
 ```
-kubectl set image deployment/mydeploy nginx-cnt=nginx:1.16.1
+kubectl set image deployment/"deployment_ismi" "container_ismi"="yeni_imaj"  
+Ör:kubectl set image deployment/mydeploy nginx-cnt=nginx:1.16.1
 ```
-#### Image güncelleme durumu kontrol etme
+#### Image güncelleme durumunu kontrol etme
 ***
 ```
 kubectl rollout status deployment/mydeploy
 ```
-#### Image revisyon geçmişini kontrol etme
+#### Deployment yapılan değişikliklerin listelenmesi
 ***
 ```
 kubectl rollout history deployment/mydeploy
 ```
-#### Önceki image revizyonlarına geri dönme
+#### Deployment yapılan son değişikliğin geri alınması
 ***
 ```
 kubectl rollout undo deployment/mydeploy
@@ -80,4 +81,19 @@ kubectl rollout undo deployment/mydeploy
 ***
 ```
 kubectl rollout undo deployment/app --to-revision=2
+```
+#### Deployment üzerindeki değişikliklerin kaydı 
+***
+```
+kubectl set image deployment/mydeploy nginx-cnt=nginx:1.16.1 --record=true 
+```
+#### Yapılan değişikliklerin durdurulması
+***
+```
+kubectl rollout pause deployment mydeploy
+```
+#### Durdurulan rollout'un devam ettirilmesi
+***
+```
+kubectl rollout resume deployment mydeploy
 ```
