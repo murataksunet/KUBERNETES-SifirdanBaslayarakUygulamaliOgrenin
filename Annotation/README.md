@@ -24,7 +24,7 @@ metadata:
 ***
 #### Komut satırından Pod üzerine Annotation ekleme 
 ```
-kubectl annotate pod mysql email="admin@murataksu.net"
+kubectl annotate pod mysql email="info@murataksu.net"
 ```
 ***
 #### Annotation bilgisi güncelleme
