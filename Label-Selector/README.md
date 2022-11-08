@@ -17,17 +17,12 @@ tier notin (frontend, backend)
 ***
 #### Pod'a Label Atama
 ```
-kubectl label pods web-nginx tier=frontend
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
 ```
 ***
 #### Node'a Label Atama
 ```
 kubectl label nodes node1 disktype=ssd
-```
-***
-#### Pod'a Label Atama
-```
-kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
 ```
 ***
 #### Label olan Pod üzerinde değişiklik yapma
