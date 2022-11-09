@@ -2,16 +2,16 @@
 
 ### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
 
-#### Pod içerisindeki container1 bash üzerine bağlanma
+#### Pod içerisindeki c1 container'ın bash üzerine bağlanma
 ***
 ```
-kubectl exec -it multipod -c container1 -- bash
+kubectl exec -it multipod -c c1 -- bash
 ```
 ***
-#### Pod içerisinde 1st container da bulunan index.html dosyasını görüntüleme   
+#### Pod içerisinde firstc1 container da bulunan index.html dosyasını görüntüleme   
 ***
 ```
-kubectl exec mc1 -c 1st -- /bin/cat /usr/share/nginx/html/index.html
+kubectl exec mc1 -c firstc1 -- /bin/cat /usr/share/nginx/html/index.html
 ```
 ***
 #### Pod içerisindeki my-container root dizini listeleme
