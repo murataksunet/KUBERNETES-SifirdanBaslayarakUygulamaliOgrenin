@@ -19,8 +19,7 @@ OS: CentOS/RHEL 7
 ***
 #### /etc/hosts içerisine node ip bilgilerini ekliyoruz
 ```
-2. IP Adreslerini IP bloğunuza  göre düzenleyin
-Tüm Nodelar Üzerinde
+Tüm Nodelar Üzerinde çalıştırılacak (IP Adreslerini IP bloğunuza göre düzenleyiniz)
 cat <> /etc/hosts 192.168.100.120 master-node 192.168.100.121 worker-node-1 192.168.100.122 worker-node-2 EOF
 ```
 ***
@@ -28,11 +27,14 @@ cat <> /etc/hosts 192.168.100.120 master-node 192.168.100.121 worker-node-1 192.
 ***
 ####  Firewall | Swap | SELinux Kapatma
 ```
-SELinux Pasif Et
+SELinux Pasif Ediyoruz
 setenforce 0 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
-#Sistem Yeniden Başlatılacak reboot
-Swap Pasif Et
+
+#Sistemi Yeniden Başlatıyoruz
+
+Swap Pasif Ediyoruz
 swapoff -a sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
+
 NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
 ```
 ***
