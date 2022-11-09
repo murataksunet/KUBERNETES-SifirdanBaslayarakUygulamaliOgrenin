@@ -13,7 +13,7 @@ kubectl create secret generic "secret-ismi" --from-literal="anahtar"="değer" --
 kubectl create secret generic empty-secret
 ```
 ***
-#### Secret Nesnesi Oluşturma
+#### Tanım üzerinden Secret Nesnesi Oluşturma
 ```
 kubectl create secret generic app-passwd --from-literal=mypassword='onetwothree123!'
 ```
@@ -30,12 +30,12 @@ data:
   password: MWYyZDFlMmU2N2Rm
 ```
 ***
-#### Secret Nesnesi Oluşturma
+#### Path üzerinden dosya içieri ile Secret Nesnesi Oluşturma
 ```
 kubectl create secret generic db-user-pass --from-file=dbuname=./username.txt --from-file=dbupassword=./password.txt
 ```
 ***
-#### Secret Nesnesi Oluşturma
+#### Birden fazla tanımlı Secret Nesnesi Oluşturma
 ```
 kubectl create secret generic db-user-pass --from-literal=username=devuser --from-literal=password='S!B\*d$zDsb='
 ```
