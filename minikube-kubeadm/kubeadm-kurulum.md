@@ -10,14 +10,14 @@ Worker: 2 vCPUs - 3GB RAM
 OS: CentOS/RHEL 7
 ```
 ***
-#### Hostname değişikliği yap. Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
+#### Host dosyası üzerinde Hostname tanımlaması yapıyoruz. Aşağıdaki adımlar ilgili node üzerinde çalıştırılacaktır
 ```
 #set-hostname master-node //Master Node Üzerinde hostnamectl 
 #set-hostname worker-node-1 //Worker Node 1 Üzerinde hostnamectl 
 #set-hostname worker-node-2 //Worker Node 2 Üzerinde hostnamectl 
 ```
 ***
-#### /etc/hosts içerisine node ip bilgileirni ekleyin
+#### /etc/hosts içerisine node ip bilgilerini ekliyoruz
 ```
 2. IP Adreslerini IP bloğunuza  göre düzenleyin
 Tüm Nodelar Üzerinde
