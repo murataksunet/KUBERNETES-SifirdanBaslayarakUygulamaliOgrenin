@@ -1,6 +1,6 @@
 ## 🧑 Ders: Declarative Yöntemle Kubernetes Nesne Yönetimi
 
-### 📗Bu bölümde Declerative yöntemde basit YAML detaylarını ve komut kullanımı bulacaksınız📗
+### 📗Bu bölümde Declerative yöntemde basit YAML detaylarını ve komut kullanımı bulacaksınız📗(murataksu.net)
 
 #### Template YAML dosyası 
 ***
