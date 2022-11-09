@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "kubectl cp" yönetim komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl cp" komut kullanımı bulacaksınız📗(murataksu.net)
 
 #### Dosya ve dizinleri pod’a veya pod’dan dosyaya kopyalama 
 ***
