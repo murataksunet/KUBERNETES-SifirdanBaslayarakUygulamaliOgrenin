@@ -24,43 +24,36 @@ iscsi - iSCSI (SCSI over IP) storage
 local - local storage devices mounted on nodes.
 nfs - Network File System (NFS) storage
 rbd - Rados Block Device (RBD) volume
-
 ```
 ***
 #### Tüm persistentvolume leri listele
 ```
 kubectl get persistentvolume
-
 ```
 ***
 #### Tüm persistentvolumeclaim leri listele
 ```
 kubectl get persistentvolumeclaim
-
 ```
 ***
 #### mypv-volume isimli persistentvolume nesnesini listele
 ```
 kubectl get pv mypv-volume
-
 ```
 ***
 #### mypvc-volume isimli persistentvolumeclaim nesnesini listele
 ```
 kubectl get pvc mypvc-volume
-
 ```
 ***
 #### pvc-volume isimli persistentvolumeclaim nesnesi detaylarını görüntüle
 ```
 kubectl describe pvc pvc-volume
-
 ```
 ***
 #### pv-volume isimli persistentvolume nesnesini detaylarını görüntüle
 ```
 kubectl describe pv pv-volume
-
 ```
 ***
 #### Tanımlı tüm Storage Class nesnelerini görüntüle
@@ -82,4 +75,3 @@ kubectl delete pv pv-volume
 ```
 kubectl delete pvc pvc-volume 
 ```
-
