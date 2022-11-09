@@ -16,7 +16,6 @@ Taint & Toleration
 *nodeSelector, node seçim yöntemlerinden en basit olanıdır
 ```
 ***
-
 #### Node üzerine label ataması yapma
 ***
 ```
@@ -38,4 +37,3 @@ kubectl get node minikube-m03 --show-labels
 ```
 kubectl get pods -o wide
 ```
-
