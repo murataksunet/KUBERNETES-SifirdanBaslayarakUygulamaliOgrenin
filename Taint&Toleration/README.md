@@ -39,7 +39,7 @@ tolerations:
   effect: "NoSchedule"
 ```
 ***
-#### POD üzerine tolerations bilgisi ekleme - memorysize key bilgisi olması yeterli
+#### POD üzerine tolerations bilgisi ekleme - node üzerinde taint olarak "memorysize" bilgisi olması yeterli
 ```
 tolerations:
 - key: "memorysize"
