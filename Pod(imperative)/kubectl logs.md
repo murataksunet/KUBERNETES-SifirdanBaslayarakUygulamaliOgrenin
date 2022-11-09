@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "log" komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl logs" komut kullanımı bulacaksınız📗(murataksu.net)
 
 #### my-web isimli podun loglarını görüntüleme
 ***
