@@ -27,7 +27,7 @@ kubectl label nodes node1 disktype=ssd
 ***
 #### Label olan Pod üzerinde değişiklik yapma
 ```
-kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" --overwrite
+kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="10.0" --overwrite
 ```
 #### Podlara atanan labelları listeleme
 ***
