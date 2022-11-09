@@ -1,6 +1,6 @@
 ## 🧑 Ders: Persistent Volume
 
-### 📗Bu bölümde Persistent Volume Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Persistent Volume ve Persistent Volume Claim Yönetim işlemlerini bulacaksınız📗
 
 #### Persistent Volume
 ***
