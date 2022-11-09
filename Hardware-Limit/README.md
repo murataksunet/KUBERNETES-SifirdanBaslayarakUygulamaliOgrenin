@@ -1,6 +1,6 @@
 ## 🧑 Ders: Hardware-Limit
 
-### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde POD Hardware-Limit Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### YAML dosyası hardware limit detayları
 ***
