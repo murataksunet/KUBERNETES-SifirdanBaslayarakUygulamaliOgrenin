@@ -1,6 +1,6 @@
 ## 🧑 Ders: Multi-Container
 
-### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Multi-Container Pod Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### Pod içerisindeki c1 container'ın bash üzerine bağlanma
 ***
