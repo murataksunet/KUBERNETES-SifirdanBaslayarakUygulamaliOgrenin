@@ -3,7 +3,7 @@
 ### 📗Bu bölümde YAML dosyası üzerinde Namespace Pod Yönetim işlemlerini bulacaksınız📗
 
 ***
-#### YAML dosyası üzerinden namespace oluşturma
+#### YAML dosyası üzerinden namespace oluşturma 
 ```
 apiVersion: v1
 kind: Namespace
