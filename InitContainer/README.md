@@ -1,6 +1,6 @@
 ## 🧑 Ders: Init-Container
 
-### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Init-Container Pod Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### Init-Container, Pod içerisinde ana container ayağa kalkmadan önce init-containerın öncelikli olarak çalıştırılması
 ***
