@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Oluşturma
 
-### 📗Bu bölümde Imperative yöntemle POD yönetim komut kullanımı bulacaksınız📗
+### 📗Bu bölümde Imperative yöntemle POD yönetim komut kullanımı bulacaksınız📗(murataksu.net)
 
 #### kubectl run komut yazım şekli
 ***
