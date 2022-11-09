@@ -1,4 +1,4 @@
-## 🧑 Ders: Imperative Yöntemle Kubernetes Nesne Yönetimi
+## 🧑 Ders: Imperative Yöntemle POD Oluşturma
 
 ### 📗Bu bölümde Imperative yöntemle POD yönetim komut kullanımı bulacaksınız📗
 
