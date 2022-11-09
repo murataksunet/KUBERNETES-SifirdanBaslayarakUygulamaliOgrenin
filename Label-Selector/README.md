@@ -1,6 +1,6 @@
 ## 🧑 Ders: Label-Selector
 
-### 📗Bu bölümde Label-Selector kullanarak Pod Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Label-Selector kullanarak Pod Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 ***
 #### Equality-based requirement
