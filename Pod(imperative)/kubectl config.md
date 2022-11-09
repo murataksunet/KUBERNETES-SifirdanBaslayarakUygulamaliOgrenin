@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "kubectl config" komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl config" komut kullanımını bulacaksınız📗(murataksu.net)
 
 #### kubeconfig dosya yolu
 ***
