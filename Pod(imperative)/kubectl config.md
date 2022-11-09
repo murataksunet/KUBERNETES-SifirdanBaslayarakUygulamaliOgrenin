@@ -2,6 +2,13 @@
 
 ### 📗Bu bölümde "kubectl config" komut kullanımı bulacaksınız📗(murataksu.net)
 
+#### kubeconfig dosya yolu
+***
+```
+kubectl config dosyası $HOME/.kube/ yolundaki config isimli dosyadır
+
+Ör: Linux ve Mac /home/murataksunet/.kube/config | Windows C:\Users\maksum\.kube\config
+```
 #### kubeconfig dosya içeriğini görüntüleme
 ***
 ```
