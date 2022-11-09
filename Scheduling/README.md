@@ -6,16 +6,18 @@
 ***
 ```
 Scheduling, Kubernetes üzerinde oluşturulacak podların talep edilen nodelar üzerinde oluşturulmasını yada oluşturulmamasını sağlayan özelliktir
-3 Farklı Node seçim yöntemi bulunur
-  Bunlar - Nodeselector
-           Affinity
-           Taint & Toleration
+
+3 Farklı Node seçim yöntemi bulunur. Bunlar:
+
+Nodeselector
+Affinity
+Taint & Toleration
 
 *nodeSelector, node seçim yöntemlerinden en basit olanıdır
 ```
 ***
 
-#### Node üzerine label atama
+#### Node üzerine label ataması yapma
 ***
 ```
 kubectl label node minikube-m03 disktype=ssd
