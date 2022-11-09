@@ -1,6 +1,6 @@
 ## 🧑 Ders: Deployment
 
-### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Deployment nesnesi yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### Imperative yöntemle Deployment oluşturma
 
