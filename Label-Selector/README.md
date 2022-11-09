@@ -64,4 +64,28 @@ kubectl get po -l app.kubernetes.io/version="8.0" -o wide
 ```
 kubectl delete po -l app.kubernetes.io/name=tomcat
 ```
-
+***
+#### Selector kullanarak Label üzerinden POD Listeleme
+```
+kubectl get pods -l "app=prod,tier=frontend" --show-labels
+```
+***
+#### Selector kullanarak Label üzerinden POD Listeleme
+```
+kubectl get pods -l 'app in (prodapp)' --show-labels
+```
+***
+#### Selector kullanarak Label üzerinden POD Listeleme
+```
+kubectl get pods -l 'app in (prodapp,demoapp)' --show-labels
+```
+***
+#### Selector kullanarak Label üzerinden POD Listeleme
+```
+kubectl get pods -l 'app in (prodapp),tier notin (frontend)' --show-labels
+```
+***
+#### Selector kullanarak Label üzerinden POD Listeleme
+```
+kubectl get pods -l 'app notin prodapp)' --show-labels
+```
