@@ -1,6 +1,6 @@
 ## 🧑 Ders: Affinity
 
-### 📗Bu bölümde Affinity Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde Affinity Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### Nedir ?
 ***
