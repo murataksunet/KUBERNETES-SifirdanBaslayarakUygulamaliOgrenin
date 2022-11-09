@@ -86,3 +86,98 @@ kubectl get pods --output name
 ```
 kubectl get pods --output wide
 ```
+***
+#### Default namespace’deki tüm pod’ları YAML formatında görüntüleme
+```
+kubectl get pods --output yaml
+```
+***
+#### my-pod isimli nesneyi yaml formatında görüntüleme
+```
+kubectl get po my-pod -o yaml
+```
+***
+#### my-pod isimli nesneyi json formatında görüntüleme
+```
+kubectl get po my-pod -o json
+```
+***
+#### my-pod isimli nesneyi yaml formatı haline getirip my-pod.yaml ismiyle dışarıya aktarma
+```
+kubectl get po my-pod -o yaml >> my-pod.yaml
+```
+***
+#### Tüm namespace’lerde ki podların kullandığı image bilgisini görüntüleme
+```
+kubectl get pods -A -o=custom-columns='DATA:spec.containers[*].image'
+```
+***
+#### Tüm namespace’lerde ki podların metadata aldındaki tüm bilgilerini görüntüleme
+```
+kubectl get pods -A -o=custom-columns='DATA:metadata.*'
+```
+***
+#### Default namespace’deki tüm pod’ların image bilgisini görüntüleme
+```
+kubectl get pods --namespace default --output=custom-columns="NAME:.metadata.name,IMAGE:.spec.containers[*].image"
+```
+***
+#### mypod isimli podun container ismi ve image bilgisini görüntüleme
+```
+kubectl get pod mypod -o custom-columns=CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image
+```
+***
+#### Tüm namespacelerdeki podların container isimlerini ve image bilgilerini görüntüleme
+```
+kubectl get pod -A -o custom-columns=CONTAINER:.spec.containers[0].name,IMAGE:.spec.containers[0].image
+```
+***
+#### Tüm nodeların ExternalIP adreslerini görüntüleme
+```
+kubectl get nodes -o jsonpath='{.items[*].status.addresses[?(@.type=ExternalIP)].address}'
+```
+***
+#### my-pod isimli pod içerisindeki tüm container isimlerini görüntüle
+```
+kubectl get pods my-pod -o jsonpath='{.spec.containers[*].name}'
+```
+***
+#### Clusterdaki tüm node’ları ayrıntılarıyla birlikte listeleme
+```
+kubectl describe nodes
+```
+***
+#### Default namespace’deki tüm pod’ları ayrıntılarıyla birlikte listeleme
+```
+kubectl describe pods 
+```
+***
+#### my-pod isimli pod’u ayrıntılı bir şekilde görüntüleme 
+```
+kubectl describe pods/my-pod 
+```
+***
+#### my-dep-demo isimli deployment nesnesini ayrıntılı olarak görüntüleme
+```
+kubectl describe deploy my-dep-demo
+```
+***
+#### my-rc isimli replicaset nesnesini ayrıntılı olarak görüntüleme
+```
+kubectl describe rc my-rc
+```
+***
+#### Pod nesnesi belgesini görüntüleme
+```
+kubectl explain pod
+```
+***
+#### Deployment nesnesi belgesini görüntüleme
+```
+kubectl explain deployment
+```
+***
+#### Belirli bir alanın belgesini görüntüleme
+```
+kubectl explain deployment.spec –recursive
+```
