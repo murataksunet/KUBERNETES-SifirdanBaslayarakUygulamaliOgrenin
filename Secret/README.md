@@ -2,6 +2,11 @@
 
 ### 📗Bu Bölümde Secret Detayları Hakkında Bilgiler Bulacaksınız📗
 
+#### Secret Nesnesi Oluşturma
+***
+```
+kubectl create secret generic "secret-ismi" --from-literal="anahtar"="değer" --from-file="anahtar"="değerin-okunacagi-dosya" --from-file="değerin-okunacagi-dosya"
+```
 #### Boş Secret Nesnesi Oluşturma
 ***
 ```
