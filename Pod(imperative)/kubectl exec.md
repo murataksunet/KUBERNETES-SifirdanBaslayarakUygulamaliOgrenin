@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "exec" komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl exec" komut kullanımı bulacaksınız📗(murataksu.net)
 
 #### Pod içerisinde komut çalıştırma yazım şekli
 ***
