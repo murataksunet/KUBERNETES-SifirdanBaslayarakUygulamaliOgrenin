@@ -39,15 +39,15 @@ kubectl get persistentvolumeclaim
 
 ```
 ***
-#### pv-volume isimli persistentvolume nesnesini listele
+#### mypv-volume isimli persistentvolume nesnesini listele
 ```
-kubectl get persistentvolume pv-volume
+kubectl get pv mypv-volume
 
 ```
 ***
-#### pvc-volume isimli persistentvolumeclaim nesnesini listele
+#### mypvc-volume isimli persistentvolumeclaim nesnesini listele
 ```
-kubectl get pvc pvc-volume
+kubectl get pvc mypvc-volume
 
 ```
 ***
@@ -71,5 +71,15 @@ kubectl get storageclass
 #### Tanımlı Storage Class nesnesi detaylarını görüntüle
 ```
 kubectl describe sc
+```
+***
+#### pv-volume isimli persistentvolume nesnesini sil
+```
+kubectl delete pv pv-volume 
+```
+***
+#### pvc-volume isimli persistentvolumeclaim nesnesini sil
+```
+kubectl delete pvc pvc-volume 
 ```
 
