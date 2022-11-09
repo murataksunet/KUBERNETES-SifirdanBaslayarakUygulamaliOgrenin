@@ -66,7 +66,7 @@ $HOME/.kube/config sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ***
 ### Aşağıdaki adımlar sadece worke nodelar üzerinde yapılacak
 ***
-#### "worker" nodeların kubernetes clustera eklenemesi. Sizde ki üretilen çıktıya göre ekleme işlemi yapılacak
+#### "worker" nodeların kubernetes clustera eklenenmesi. Sizde ki üretilen çıktıya göre ekleme işlemi yapılacak 
 ####  Master Node yapılandırması tamamlandıktan sonra üretilen komut worker nodelar üzerinde çalıştırılacaktır
 ```
 kubeadm join 192.168.100.120:6443 --token tv17b1.dlsj9vbl8pc42pr1
