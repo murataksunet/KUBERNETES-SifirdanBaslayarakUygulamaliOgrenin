@@ -6,7 +6,7 @@
 ***
 ```
 Probe’lar Pod’ların sağlık durumunu kontrol etmek için kullanılmaktadır. 
-Probe Periyodik olarak cluster’da yapılan diagnostik  (tarama) operasyonudur.
+Probe Periyodik olarak cluster’da yapılan diagnostik (tarama) operasyonudur
 ```
 ***
 #### Probe Türleri
