@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "kubectl port-forward" komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl port-forward" komut kullanımını bulacaksınız📗(murataksu.net)
 
 #### Bir veya daha fazla yerel bağlantı noktasını Pod’a yönlendirme komut sentaksı
 ***
