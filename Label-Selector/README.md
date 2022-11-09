@@ -15,14 +15,19 @@ environment in (production, qa)
 tier notin (frontend, backend)
 ```
 ***
-#### Pod'a Label Atama
+#### Pod'a Label atama
 ```
 kubectl label pod tomcat-labelpod-2 app.kubernetes.io/version="9.0" 
 ```
 ***
-#### Node'a Label Atama
+#### Node'a Label atama
 ```
 kubectl label nodes node1 disktype=ssd
+```
+***
+#### Bir namespace’deki tüm objelere toplu halde label atama
+```
+kubectl label pods --all foo=bar
 ```
 ***
 #### Node üzerinde ki Label bilgisini kaldırma
