@@ -1,6 +1,6 @@
 ## 🧑 Ders: ConfigMap
 
-### 📗Bu bölümde ConfigMap Nesne Yönetim işlemlerini bulacaksınız📗
+### 📗Bu bölümde ConfigMap Nesne Yönetim işlemlerini bulacaksınız📗(murataksu.net)
 
 #### ConfigMap Nesnesi Oluşturma
 ***
