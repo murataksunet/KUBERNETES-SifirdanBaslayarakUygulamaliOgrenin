@@ -11,12 +11,12 @@ metadata:
   name: myrepc
 ```
 ***
-#### Sistemde tanımlı replicationcontroller nesnelerini listele
+#### Sistemde tanımlı replicationcontroller nesnelerini listeleme
 ```
 kubectl get replicationcontroller
 ```
 ***
-#### Replicationcontroller nesnesi detaylarını görüntüle
+#### Replicationcontroller nesnesi detaylarını görüntüleme
 ```
 kubectl describe rc myrepc
 ```
@@ -49,7 +49,7 @@ metadata:
 kubectl get replicaset
 ```
 ***
-#### ReplicaSet nesnesi detaylarını görüntüle
+#### ReplicaSet nesnesi detaylarını görüntüleme
 ```
 kubectl describe rs myreps
 ```
