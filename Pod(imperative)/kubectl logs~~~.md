@@ -1,4 +1,4 @@
-## 🧑 Ders: Imperative Yöntemle POD Oluşturma
+## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
 ### 📗Bu bölümde Imperative yöntemle POD log komut kullanımı bulacaksınız📗(murataksu.net)
 
