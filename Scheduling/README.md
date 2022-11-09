@@ -13,7 +13,8 @@ Nodeselector
 Affinity
 Taint & Toleration
 
-*nodeSelector, node seçim yöntemlerinden en basit olanıdır. Her konu kendi başlığı altında incelenecektir. Bu bölümde nodeselector detayları verilmiştir. 
+*nodeSelector, node seçim yöntemlerinden en basit olanıdır. Her konu kendi başlığı altında incelenecektir. 
+Bu bölümde nodeselector detayları verilmiştir. 
 ```
 ***
 #### Node üzerine label ataması yapma
