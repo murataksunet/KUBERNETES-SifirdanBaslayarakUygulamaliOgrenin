@@ -34,21 +34,19 @@ setenforce 0 sed -i --follow-symlinks 's/SELINUX=enforcing/SELINUX=disabled/g' /
 
 Swap Pasif Ediyoruz
 swapoff -a sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
-
-NOT: Aşağıdaki adımlar hem master hemde worker nodelar üzerinde çalıştırılacaktır
 ```
 ***
-#### Kubernetes Repository tanımla
+#### Kubernetes Repository tanımlıyoruz
 ```
 cat < /etc/yum.repos.d/kubernetes.repo [kubernetes] name=Kubernetes baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64 enabled=1 gpgcheck=1 repo_gpgcheck=1 gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg exclude=kube* EOF
 ```
 ***
-#### Sistem güncelleme ve Docker | Kubelet | Kubeadm | Kubectl Kurulum
+#### Sistem güncelleme ve Docker | Kubelet | Kubeadm | Kubectl Kurulumu yapıyoruz
 ```
 yum update -y yum install -y docker kubeadm kubelet kubectl --disableexcludes=kubernetes
 ```
 ***
-#### Docker ve Kubectl aktif etme ve başlatma
+#### Docker ve Kubectl aktif edip başlatıyoruz
 ```
 systemctl enable docker && systemctl start docker systemctl enable kubelet && systemctl start kubelet
 ```
