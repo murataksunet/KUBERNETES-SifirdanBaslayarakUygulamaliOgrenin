@@ -1,6 +1,6 @@
-## 🧑 Ders: Declarative Yöntemle Kubernetes Nesne Yönetimi
+## 🧑 Ders: Imperative Yöntemle Kubernetes Nesne Yönetimi
 
-### 📗Bu bölümde Declerative yöntemde basit YAML detaylarını ve komut kullanımı bulacaksınız📗
+### 📗Bu bölümde Imperative yöntemle POD yönetim komut kullanımı bulacaksınız📗
 
 #### kubectl run komut yazım şekli
 ***
