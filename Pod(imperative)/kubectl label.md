@@ -1,6 +1,6 @@
 ## 🧑 Ders: Imperative Yöntemle POD Yönetimi
 
-### 📗Bu bölümde "kubectl label" komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl label" komut kullanımını bulacaksınız📗(murataksu.net)
 
 #### Clusterdaki nodeları Label’ları ile birlikte listeler
 ***
