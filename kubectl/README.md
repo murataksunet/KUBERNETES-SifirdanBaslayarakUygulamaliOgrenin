@@ -74,12 +74,12 @@ kubectl get pods --sort-by=.status.containerStatuses[0].restartCount
 Örn: Default namespace’deki tüm pod’ların sadece isimlerini listeleme
 kubectl get pods --output name
 
--o yaml Yaml formatında çıktı döndürür.
--o json Json formatinda çıktı döndürür.
--o wide Plain-text fakat daha çok bilgi içerir.
--o jsonpath=<template> Jsonpath ifadesinde tanımlanan alanları döndürür.
--o name Sadece isimleri döndürür.
--o custom-columns=<spec> Comma-seperated olarak belirtilen kolonlardan bir table döndürür.
+-o yaml YAML formatında çıktı döndürür
+-o json JSON formatinda çıktı döndürür
+-o wide çıktıyı detay bilgi şekilde döndürür 
+-o jsonpath=<template> Jsonpath ifadesinde tanımlanan alanları döndürür
+-o name Sadece isimleri döndürür
+-o custom-columns=<spec> Comma-Seperated kolonlardan bir table döndürür
 ```
 ***
 #### Default namespace’deki tüm pod’ları ek bilgilerle listeleme (IP adresi,node ismi vb)
