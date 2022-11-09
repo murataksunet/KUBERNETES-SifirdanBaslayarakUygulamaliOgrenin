@@ -11,7 +11,7 @@ kullandığımız nesnedir. Farklı veri depolama türlerini desteklemektedir.
 ***
 #### Persistent Volume Clam
 ```
-Pod için talep edilen kapasiteyi PV üzerinden tanılayan nesnedir. Pod -> PVC -> PV -> Storage
+Pod için talep edilen kapasiteyi PV üzerinden tanımlayan nesnedir. Pod -> PVC -> PV -> Storage
 ```
 ***
 #### Desteklenen PersistentVolume Türleri
