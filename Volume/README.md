@@ -1,6 +1,6 @@
 ## 🧑 Ders: Volume
 
-### 📗Bu bölümde emptyDir ve HostPath yönetimi hakkında bilgi bulacaksınız📗
+### 📗Bu bölümde emptyDir ve HostPath yönetimi hakkında bilgi bulacaksınız 📗(murataksu.net)
 
 #### Pod içerisine emptyDir volume bağlama
 ***
