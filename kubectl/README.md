@@ -1,78 +1,80 @@
-## 🧑 Ders: Imperative Yöntemle POD Oluşturma
+## 🧑 Ders: kubectl
 
-### 📗Bu bölümde Imperative yöntemle POD yönetim komut kullanımı bulacaksınız📗(murataksu.net)
+### 📗Bu bölümde "kubectl" komut kullanımı bulacaksınız📗(murataksu.net)
 
-#### kubectl run komut yazım şekli
+#### Kubectl komut yazım şekli
 ***
 ```
-kubectl run NAME --image=image [--env="key=value"] [--port=port] [--dry-run=server|client] [--overrides=inline-json] [--command] -- [COMMAND] [args...]
+kubectl [command] [TYPE] [NAME] [flags]
 ```
 ***
-#### my-web adında nginx image’ını kullanan pod oluşturma/çalıştırma
+#### Kubectl versiyon bilgisini görüntüleme
 ```
-kubectl run my-web --image=nginx
-```
-***
-#### hazelcast adında hazelcast image’ını kullanan, 5701 portu açılarak pod oluşturma/çalıştırma
-```
-kubectl run hazelcast --image=hazelcast --port=5701
+kubectl version
 ```
 ***
-#### my-web adında nginx image’ını kullanan pod oluşturmadan önizleme
+#### Kubectl versiyon bilgisini kısa görüntüleme
 ```
-kubectl run my-web --image=nginx --dry-run=client
-```
-***
-#### my-web adında nginx image’ını kullanan pod yaml dosyasını ekrana çıktı alma
-```
-kubectl run my-web --image=nginx --dry-run=client -o yaml
+kubectl version –short
 ```
 ***
-#### my-web adında nginx image’ını kullanan pod yaml dosyasını mypod.yaml olarak çıktı alma
+#### Cluster detaylarını görüntüleme
 ```
-kubectl run my-web --image=nginx --dry-run=client -o yaml >> mypod.yaml
-```
-***
-#### my-web adında nginx image’ını kullanan pod kapandığında yeniden başlatmama
-```
-kubectl run my-web --image=nginx --restart=Never
+kubectl cluster-info
 ```
 ***
-#### my-web isimli podu silme
+#### Desteklenen API sürümlerini görüntüleme
 ```
-kubectl delete pods my-web
-```
-***
-#### Baz ve foo isimli podları ve servisleri silme
-```
-kubectl delete pod,service baz foo
-```
-#### Pod.yaml dosyasında ki nesneleri silme
-```
-kubectl delete -f pod.yaml
+kubectl api-versions
 ```
 ***
-#### Default namespacedeki tüm podları silme
+#### Cluster içerisindeki tüm nodeları listeme
 ```
-kubectl delete pods --all
-```
-***
-#### Default namespacedeki oluşturulmuş tüm nesneleri silme
-```
-kubectl delete all --all
+kubectl get nodes
 ```
 ***
-#### my-ns namespacedeki tüm podları ve servisleri silme
+#### Default namespacedeki tüm podları listeleme
 ```
-kubectl delete -n my-ns pod,svc --all
-```
-***
-#### foo isimli podu en kısa sürede silme
-```
-kubectl delete pod foo –now
+# kubectl get pods
+Not: Demo ortamızda nesne yoksa test amaçlı deployment nesnesi oluşturabilirsiniz
+kubectl create deployment my-dep-demo --image=nginx --scale=10
 ```
 ***
-#### foo isimli podu silmeye zorla
+#### Default namespace’deki tüm replicasetleri listeleme
 ```
-kubectl delete pod foo --force
+kubectl get replicaset
+```
+***
+#### Default namespace’deki tüm deployment’ları listeleme
+```
+kubectl get deployment
+```
+#### Default namespace’deki tüm pod,replicaset ve deployment’ları tek komutla listeleme
+```
+kubectl get po,rs,deploy
+```
+***
+#### Tüm namespace’lerdeki pod’ları listeleme
+```
+kubectl get pods --all-namespaces
+```
+***
+#### Default namespace’deki tüm pod’ları ada göre sıralayarak listeleme
+```
+kubectl get pods --sort-by=.metadata.name
+```
+***
+#### Default namespace’deki tüm pod’ları yeniden başlatma sayısına göre listeleme
+```
+kubectl get pods --sort-by=.status.containerStatuses[0].restartCount
+```
+***
+#### Default namespace’deki tüm pod’ların sadece isimlerini listeleme
+```
+kubectl get pods --output name
+```
+***
+#### Default namespace’deki tüm pod’ları ek bilgilerle listeleme (IP adresi,node ismi vb)
+```
+kubectl get pods --output wide
 ```
