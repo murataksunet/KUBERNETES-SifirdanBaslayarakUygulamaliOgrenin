@@ -4,10 +4,10 @@ Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinde
 
 # Bölümler
 
-- [01-Bölüm Bir](docs/01-Introduction)
+- [01-Birinci Bölüm ](docs/01-Introduction)
 
-  - [01-Tanışalım mı ?](https://github.com/murataksunet/KUBERNETES-SifirdanBaslayarakUygulamaliOgrenin/tree/main/Affinity)
-  - [02-Eğitim Yol Haritası](docs/01-Introduction/02-Certification.md)
-  - [03-Eğitimde Kullanılan Materyaller](docs/01-Introduction/02-Certification.md)
-  - [04-Sorular Pratik Testler](docs/01-Introduction/02-Certification.md)
+  - 01-Tanışalım mı ?
+  - 02-Eğitim Yol Haritası
+  - 03-Eğitimde Kullanılan Materyaller
+  - 04-Sorular Pratik Testler
 
