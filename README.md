@@ -8,10 +8,10 @@ Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinde
 
 - Birinci Bölüm:  
   - Tanışıyoruz
-    -Tanışalım mı ?
-    -Eğitim Yol Haritası
-    -Eğitimde Kullanılan Materyaller
-    -Sorular Pratik Testler 
+    - Tanışalım mı ?
+    - Eğitim Yol Haritası
+    - Eğitimde Kullanılan Materyaller
+    - Sorular Pratik Testler 
 
 İkinci Bölüm:  
 
