@@ -4,41 +4,28 @@ Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinde
 
 # Bölümler
 
-- [01-Birinci Bölüm ](docs/01-Introduction)
-
 - Birinci Bölüm:  
-  - Tanışıyoruz
+  - Giriş
     - Tanışalım mı ?
     - Eğitim Yol Haritası
     - Eğitimde Kullanılan Materyaller
     - Sorular Pratik Testler 
 
-İkinci Bölüm:  
-
-Hoş geldin Sanallaştırma
-
-Konteyner(Container) Teknolojisi  Nedir ?
-
-Docker Nedir ?
-
-Demo : Docker İle Konteyner Demoluyoruz
-
-Microservice Mimarisi Nedir ?
-
-Kubernetes Nedir ?
-
-Demo : Kubernetes Üzerinde Web Servis İncelemesi
-
-Docker ile Kubernetes Arasında ki Fark Nedir ?
-
-DevOps Nedir ?
-
-Kubernetes Tarihçesi ve Populer Olma Nedenleri
-
-Piyasadaki Konteyner Orkestrasyon Araçları
+- İkinci Bölüm:  
+  - Kubernetes Nedir Giriş Yapıyoruz
+    - Hoş geldin Sanallaştırma
+    - Konteyner(Container) Teknolojisi  Nedir ?
+    - Docker Nedir ?
+    - Demo : Docker İle Konteyner Demoluyoruz
+    - Microservice Mimarisi Nedir ?
+    - Kubernetes Nedir ?
+    - Demo : Kubernetes Üzerinde Web Servis İncelemesi
+    - Docker ile Kubernetes Arasında ki Fark Nedir ?
+    - DevOps Nedir ?
+    - Kubernetes Tarihçesi ve Populer Olma Nedenleri
+    - Piyasadaki Konteyner Orkestrasyon Araçları
 
 Üçüncü Bölüm:  
-
 Büyük Resmi İnceliyouruz
 
 Kubernetes Master
