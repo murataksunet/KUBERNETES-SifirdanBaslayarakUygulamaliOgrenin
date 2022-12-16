@@ -100,7 +100,7 @@ Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinde
     - ConfigMap Nedir
     - ConfigMap Uygulama
 
-- Sekizinci Bölüm:  
+- Dokuzuncu Bölüm:  
   - Kubernetes Deployments
     - ReplicationController ve Replicaset  Detaylandırıyoruz
     - ReplicationController Uygulama
@@ -111,7 +111,7 @@ Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinde
     - Deployment Rolling Update – Rollback Örneklemesi -1
     - Deployment Rolling Update – Rollback Örneklemesi -2
 
-- Dokuzuncu Bölüm:  
+- Onuncu Bölüm:  
   - Kubernetes Services
     - Kubernetes Service Nedir ve Türleri
     - Demo: NodePort Service İncelemesi
