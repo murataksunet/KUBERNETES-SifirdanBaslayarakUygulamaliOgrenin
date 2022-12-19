@@ -36,7 +36,6 @@ metadata:
   name: database
   labels:
     db: mysql
-    app: php
 spec:
   containers:
   - name: mysql-container
