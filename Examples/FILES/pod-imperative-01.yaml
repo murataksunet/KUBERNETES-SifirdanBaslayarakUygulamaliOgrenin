@@ -1,0 +1,61 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: mynamespace
+  labels:
+    env: specialspace
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webpod
+  labels:
+    app: prod
+    tier: frontend
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: prod
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: prod
+        tier: frontend
+    spec:
+      containers:
+      - name: web-container
+        image: murataksunet/web-site-versions:v1
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: database
+  labels:
+    db: mysql
+    app: php
+spec:
+  containers:
+  - name: mysql-container
+    image: mysql:5.6
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: onetwothree!!
+    ports:
+    - containerPort: 3306
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: multicontainer
+spec:
+  containers:
+  - name: blue
+    image: nginx
+  - name: pink
+    image: alpine
+  - name: yellow
+    image: rediso
