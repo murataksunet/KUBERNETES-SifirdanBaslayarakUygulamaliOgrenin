@@ -1,4 +1,4 @@
-# Kubernetes: Sıfırdan Başlayarak Uygulamalı Öğrenin
+# Kubernetes: Sıfırdan Uygulamalı Öğrenin | CKA Hazırlanın
 
 Bu eğitmde sizlere günümüzün populer konteyner orkestrasyon çözümlerinden biri olan Kubernetes hakkında sıfırdan başlayarak bilgiler vermekteyim. Kubernetes mimarisini sıfırdan başlayarak uygulamalı olarak öğreneceksiniz. Eğitim içierisinde CKA(Certified Kubernetes Administrator) sertifika sınavına hazırlamak isteyenler için uygulamalı pratik alıştırmalar ve testler bulunmaktadır. 
 
